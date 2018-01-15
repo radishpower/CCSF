@@ -1,0 +1,342 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+     <h1>CS 111A Lecture Notes - Computer Basics  - Chapter 1</h1>
+     <h3>Hardware and Software</h3>
+
+     <ul>
+       <li><b>Hardware</b> - physical machines
+       <li><b>Program</b> - set of instructions to run on those machines
+       <li><b>Software</b> - the collection of such programs
+     </ul>
+
+     <h3>5 Main Components of Computer Hardware</h3>
+
+     <ol>
+
+     <li><b>Central Processing Unit (CPU)</b> - Fetches and follows instructions, and does simple arithmetic
+
+  calculations. (Following simple instructions given to it.)
+
+     <li><b>Main Memory (RAM)</b> - A silicon-wired card inside the computer box containing huge numbers of
+
+  numbered memory locations (bits organized into bytes).  High speed, low capacity.  Volatile (memory is
+
+  lost when power shuts down).
+
+  <ul>
+
+    <li><b>bit</b> - a binary number; either 0 or 1. Stored electronically with 0 meaning off (no power
+
+    flowing through a circuit) and 1 meaning on (power flowing).
+
+    <li>Because computer memory is based upon this principle of 2 possible states, it's useful to work
+
+    with powers of 2 for computer memory.
+
+    <li><b>byte</b> - 8 bits, giving 2<sup>8</sup> (256) possible values - a more useful unit of measure
+
+    <li><b>memory address</b> - The location of the first byte of memory used for a variable.  Stored
+
+    numerically, often in hexidecimal (base 16) format.
+
+  </ul>
+
+  <li><b>Secondary Memory</b> - Hard drive, flash memory, CD-ROM, etc.  Low speed, high capacity.  Non-
+
+  volatile (nothing lost when power is cut.)
+
+  <li><b>Input Device</b> - Keyboard Mouse, etc. (input stream)
+
+  <li><b>Output Device</b> - Screen, Printer, etc.  (output stream)
+
+</ol>
+
+<h3>Making Software Work</h3>
+
+<ul>
+
+  <li><b>Operating System</b> - Windows, Linux, Mac OS X, Android, iOS, etc. intermediary between hardware and software.
+
+  Coordinates operation of tasks, allocates resources.  The OS is a program itself.
+
+  <li><b>High-level language</b> -  Java, C, C++, PHP, JavaScript, Python, etc.  Platform-independent (commands are
+
+  the same for all kinds of computers). Designed to be understandable by people, and usually compiled to work
+
+  on computers.
+
+  <li><b>Low-level language</b> - Very simple computer instructions given one small step at a time.  True
+
+  <b>Machine Language</b> is made up of binary numeric codes for these instructions.  We generally deal
+
+  with its equivalent <b>Assembly Language</b>, which uses short abbreviations for commands, such as "add"
+
+  for an addition calculation, or "sub" for subtraction.  Platform-dependent (commands are different for
+
+  different kinds of computers)
+
+  <li><b>Compiler</b> - Converts a high level language to assembly language, saving it in a new file.  Source
+
+  code to Object code.  A compiler is a program, generally written in a high level language itself. Compilers
+
+  are generally platform-dependent.  They produce assembly language that works only on the machine they are
+
+  running on.
+
+  <li><b>Interpreter - </b> a program which inputs a source code program (such as Perl or PHP) and
+
+  executes it directly, converting each line of code to machine language as it goes.  This is like
+
+  compiling and running a program all in one step.
+
+</ul>
+
+
+
+<h3><a href="http://fog.ccsf.cc.ca.us/~cpersiko/csDept/progLangs.html"> Here is an historical Glossary of Programming Languages</a> </h3>
+
+
+
+
+
+<h3> Java Code</h3>
+
+<ul>
+
+  <li>Java programs are compiled and run in an unsual way - they are both compiled and interpreted:
+
+    <ol>
+
+    <li>The Java source code you write is compiled into <b>Java Byte Code</b>, which is like assembly
+
+    language, but it's machine-independent. (Java Byte Code is the assembly language for an imaginary
+
+    machine called the "Java Virtual Machine".)  The <b>javac</b> program does this for you.  The compiler
+
+    saves the java byte code in a file with the class's name followed by the extension <b>.class</b>
+
+    <li>This Java Byte Code is interpreted and run - it is converted to your specific machine's language as
+
+    it is run.  The <b>java</b> program ("run time environment") does this for you.
+
+    </ol>
+
+  <li> When you're running a program called Prog1, the file you're actually
+
+  executing (through the java interpreter) is Prog1.class, but you type simply "java Prog1" to execute it.
+
+  <li> If you do type "java Prog1.class", the period will be perceived as a directory symbol, meaning the
+
+  java interpreter will attempt to run a file called "class" in a directory called "Prog1".
+
+  <li> This use of the period to specify a directory can also be seen in java code such as this: <br>
+
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;import javax.swing.*;</code><br>
+
+  in which we're saying that our program will need to import all the classes in the javax/swing library
+
+  directory. (We'll learn more about this soon)
+
+
+
+  <li>Here is a simple Java program:
+
+  <hr>
+
+  <pre>
+
+    /* Craig Persiko
+
+       HelloWorld.java
+
+
+
+       Simple Hello World program
+
+    */
+
+
+
+    class HelloWorld
+
+    {
+
+      public static void main(String[] args)
+
+      {
+
+        System.out.println("Hello World!");   //Display the string.
+
+      }
+
+    }
+
+  </pre>
+
+  <hr>
+
+  <li>The above program will compile correctly, but if you make one small change, it probably will produce
+
+  a compiler error.
+
+  <li>The formatting of the above program is largely for human readability.  Programs are written for 2
+
+  audiences: they must make sense to both the computer and to other programmers.
+
+  <li>For example, the semicolon is used to mark the end of a line of code.  Hitting return after each
+
+  line is just us to be able to read it better.
+
+  <li>The first line, which begins with "/*" is the beginning of a <B>comment</B>.  Everything from /* to */
+
+  is ignored by the compiler; it's just there for us to read.  Another way to specify a comment is to begin
+
+  it with "//", then the comment ends at the end of the line (like "//Display the string." above)
+
+  <li>All java code must be inside a class definition, and the class must be given a name which matches the
+
+  filename.
+
+  <li> Every stand-alone java program must have a <B>main function</B>, which begins with the header:<br>
+
+  <code>public static void main(String[] args)</code>
+
+  <li> <b>Key Words</b> such as "class", "public", "static", and "void" are words that have a special
+
+  meaning in Java. Also called <B>Reserved Words</B>
+
+  <li> <b>Operators</b> are symbols that have special meaning in Java (common examples are: + - * / )
+
+  <li> <b>Punctuation</b> such as the semi-colon ";" the curly-braces "{" and "}" and parentheses "(" and
+
+  ")" is needed in Java to mark boundaries between statements, etc.
+
+  <li> <b>Literals</b> are explicit values in a program, such as the string "Hello, World!"
+
+  <li>Oracle's Java Tutorial website has
+
+  <a href="http://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html">
+
+  some excellent instructions for getting started with Java</a>.  We'll follow their instructions to
+
+  compile and run the above program.
+
+</ul>
+
+
+
+<h3>Software Development</h3>
+
+<ul>
+
+  <li><b>Software Development Life Cycle</b> - Analysis, Design, Implementation, Testing,
+
+  Maintenance/Evolution, Obsolescence.  Implementation (writing code in Java or other languages) occupies only
+
+  20% of the total development time for a project.
+
+  <li><b>Testing and Debugging</b> - 3 kinds of errors: Syntax/Compile-time, Run-time, and Logic.
+
+  Syntax errors often confuse the compiler, so attack the first error, then try compiling again.
+
+
+
+  <li><b>Algorithm</b> - a sequence of precise instructions.  May be conveyed using flowchart, logic diagram,
+
+  pseudo-code, or such. Planning saves time!  Think in terms of what you want, how you can do it, before you
+
+  dive in.
+
+  <li> Here's an example of a pseudo-code algorithm to buy the textbooks for a class, using
+
+  parameters for the course number and section number:
+
+  <p>
+
+  To buy the books for CS 111A Section 001, you would write:<P>
+
+  BuyTextBooks(CourseNumber="CS 111A", SectionNumber="001");<p>
+
+  To buy the books for English 1A Section 581, you would write:<p>
+
+  BuyTextBooks(CourseNumber="ENGL 1A", SectionNumber="581");
+
+  <p>
+
+  Here is the generic algorithm to buy textbooks:
+
+  <p>
+
+  <b>BuyTextBooks(CourseNumber, SectionNumber):</b>
+
+  <ol>
+
+    <li> Go to the college bookstore.
+
+    <li> Pick up a shopping basket.
+
+    <li> Find the section for textbooks.
+
+    <li> Locate the shelf labeled for CourseNumber and SectionNumber.
+
+    <li> <b>Repeat</b> for each required book for this course section:
+
+    <ol>
+
+      <li> Determine the required book's title and author.
+
+      <li> Pick up a copy of the required book and put it in your shopping basket.
+
+    </ol>
+
+    <li> <b>Repeat</b> for each optional book for this course section:
+
+    <ol>
+
+      <li> Determine the optional book's title and author.
+
+      <li> Pick up a copy of the optional book.
+
+      <li> Look at optional book to decide if you want to buy it:
+
+      <li> <b>If</b> you want to buy the optional book:
+
+      <ol>
+
+        <li> Put the optional book in your shopping basket.
+
+      </ol>
+
+      <li> <b>If</b> you do <b>not</b> want to buy the optional book:
+
+      <ol>
+
+        <li> Put the optional book back on the shelf where you found it.
+
+      </ol>
+
+    </ol>
+
+    <li> Go to the cash register.
+
+    <li> Pay for the book(s) in your shopping basket.
+
+    <li> Exit the bookstore with your books.
+
+  </ol>
+
+</ul>
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,66 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+<p>Everyone who is registered in a computer science class @CCSF automatically gets two computer accounts: one on the ACRC's Windows network, and one on "hills", which is a Linux server.</p>
+<h2>Hills Account Info</h2>
+<p>Your hills account is on a Linux server, and gives you access to text file editing through the "nano" program, and Java compiling through the "javac" program, plus other standard software. Hills may be accessed from any computer that has Internet access, including the computers in the ACRC. To access hills, use any SSH or terminal emulation program, such as SSH Client or PuTTY from Windows. From a Mac or Linux computer, open a Terminal window and type ssh.</p>
+<p>Your hills login name is the same as your CCSFmail account user name. To find this user name, Login to Web4, go to the "Student Services &amp; Financial Aid" tab, and scroll down to the "Student CCSFmail" link near the bottom of the page. Then click on "CCSFmail info". If you need help determining your login name, ask an ACRC staff member. Your initial password for hills is your birthday and first, last initials in mmmddyy.fl format, for example, if you are Craig Persiko, born on January 3, 1980, the password would be jan0380.cp These two initials are actually the first two characters of your login name. You will be forced to change this password the first time you login, using this password as your "old password", and a new one of your choice for future use. Even if you've logged onto hills before, you have to use this new password. Ask the ACRC staff for help if you can't login.</p>
+<h2>Connecting to Hills</h2>
+<p>To connect to hills, use a terminal emulation program such as SSH Client or PuTTY. From a Mac or Linux computer, you can open a terminal window and type: ssh uname@hills.ccsf.edu (Put your hills username in place of "uname" above.)</p>
+<h2>Using ACRC Computers</h2>
+<p>Your ACRC account is used only to log into PC's in the Academic Computing Resource Center (ACRC) computer lab in Batmale 301, PC-Labs 1 and 2, plus some of the PC's toward the back of the main concourse. These computers are specifically for CS and CNIT students, and they have special software for our classes. Other computers don't require special logins, but they are slower. You can access Firefox, SSH Client, and compilers such as Eclipse from these computers, as well as other standard software.</p>
+<p>In an overflow classroom, the assignments during the latter half of our course can be completed in the ACRC lab</p>
+<p>There are also tutors available in the ACRC. They can help you with your homework. For extra help getting started with hills and the computers in the ACRC, go to a lab orientation in the first couple weeks of the semester. The login to your ACRC Windows account is the same as the initial login to your Hills account described above. Your initial password is your birthdate and initials in the same format as it was for hills, and this password is reset at the beginning of each semester, so your old password is no longer valid if you've logged in to the ACRC network in previous semesters. If this is your first login to your Windows account, or if your password has expired (approximately every 45 days), there is a reminder to change your password, and you should do so.</p>
+<p>Make sure to log off when you are finished with the computer. To log out of Windows, go to the Start menu at the bottom-left-side of the screen and select "Log Off"</p>
+<h2>Linux Basics</h2>
+<p><a href="http://www.ccsf.edu/en/student-services/learning-resources/acrc/handouts.html">The ACRC has put some good Linux-related tips online</a></p>
+<p>One common mistake with hills is when people use the mouse. On hills, we are using Linux with a text-only interface, so your mouse does nothing to interact with hills. When you're using hills, forget about the mouse. Another common mistake is that people don't know Linux is case- sensitive. File and program names must always be in the correct (upper or lower) case.</p>
+<p>When you log in to hills using your own username, you will automatically be placed in your own directory on hills. So you can save any files you wish in that directory or any subdirectories you create. All the files you create will be there for you next time you login.</p>
+<p>Here is a list of basic commands you should know, all of which you type at the main Linux (bash) prompt:</p>
+<dl>
+<dt><strong>ls</strong></dt>
+<dd>list files in current directory. Use <strong>ll</strong> to list all files (including hidden ones)</dd>
+<dt><strong>rm</strong> myfile</dt>
+<dd>remove (delete) the file specified (replace myfile with your file's name)</dd>
+<dt><strong>cp</strong> oldfile newfile</dt>
+<dd>copy file: above will make a new copy of oldfile, calling it newfile</dd>
+<dt><strong>mv</strong> oldfile newfile</dt>
+<dd>move file: above will change the name of oldfile to newfile</dd>
+<dt><strong>mkdir</strong> newdir</dt>
+<dd>make directory: above will make a new directory called newdir</dd>
+<dt><strong>cd</strong> newdir</dt>
+<dd>change directory: above will make newdir the new working (current) directory</dd>
+<dt><strong>cat</strong> myfile</dt>
+<dd>concatenate (display): above will print the contents of myfile to the screen</dd>
+<dt><strong>more</strong> myfile</dt>
+<dd>same as cat, except it shows only one page at a time. Hit space to see next page, or "q" to stop display.</dd>
+<dt><strong> script</strong> myscript.txt</dt>
+<dd>create a script file called "myscript.txt" (use any name you wish, but please end it with .txt). Script file will contain all future screen output. Don't forget to type "exit" to stop scripting!</dd>
+<dt><strong> exit</strong></dt>
+<dd>exit, or logout, from hills. Or if you're in the midst of a saving your output to a script, this will stop the scripting.</dd>
+<dt><strong>Ctrl-C</strong></dt>
+<dd><strong>To terminate a program</strong> - if you need to stop a program and get back to your Linux prompt (maybe your program is in an infinite loop or something) - type <strong>Ctrl-C</strong> (Control and 'c' together). If you just close your terminal emulator without stopping your program or logging out, the program will continue to run indefinitely, and you won't be able to delete that program file!</dd>
+<dt><strong>man</strong> xxx</dt>
+<dd>manual page: Linux online help: above will tell you more about xxx. So to learn more about ls, type "man ls"</dd>
+<dt><strong>quota -v</strong></dt>
+<dd>Used to find out how close you are to your quota and maximum limit of storage space on hills.</dd>
+</dl>
+<h4>nano or pico (text editor)</h4>
+<p>Nano and pico both work exactly the same way on hills. Just replace "nano" with "pico" below if nano gives you any trouble. To run nano to create a new file, simply type "nano" at the Linux prompt. To use nano to edit an existing file (or create a new one) type "nano filename" where filename is replaced by whatever file you want to edit. To save your file in nano, type Ctrl-o (for write Out), and to exit, type Ctrl-x (it will prompt you to save if you've made changes). The is a limited menu of commands at the bottom of the nano screen, with the control key represented by ^. To insert a file that you've saved on hills into the document you're currently editing, type Ctrl-R.</p>
+<h4>javac (Java compiler)</h4>
+<p>Once you've used nano or pico to write your Java program, use javac to compile it. The filename for your program must end in ".java" so that javac knows it is a java program. If your program didn't compile correctly, you'll get errors or warnings telling you what's wrong. Otherwise, javac should have created a class file for each of your classes, with the name of that class followed by ".class". So if the file "prog1.java" defines the class "prog1", then you compile the program by typing: "javac prog1.java". If you simply get another prompt, with no message, it compiled successfully. The file "prog1.class" should now be in your directory. To test your program, type "java prog1" at the prompt. <strong> To compile and run a java program on your computer, you follow the above directions, starting from a command prompt.</strong></p>
+<h2>Logging Out</h2>
+<p>When you are done using any computer system, you should always log out. To log out of hills, type "exit" at the command prompt. To log out of the Windows network, go to the Start menu and select "Log Off".</p>
+
+    </div>
+
+  </body>
+
+</html>

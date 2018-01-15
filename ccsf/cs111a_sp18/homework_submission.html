@@ -1,0 +1,50 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+<p>You can install your own Java compiler, such as those listed on Craig Persiko's <a href="https://fog.ccsf.edu/~cpersiko/links.html">links</a> page.</p>
+<h2>Summary: Step-by-Step Instructions for Submitting Homework via Canvas</h2>
+<p>You can use any method above to complete your homework. However, in order for your homework to be graded, you must submit <strong>a text file containing your source code</strong> and <strong>sample output</strong></p>
+<p>For example, on HIlls, you can complete the following procedure:</p>
+<ol>
+<li>Sit at a computer that is connected to the Internet. If personal account login is necessary, use a local ACRC account.</li>
+<li>Run a terminal emulation program such as SSH Client or PuTTY. (Or open a Terminal window if using Mac or Linux.)</li>
+<li>Connect and login to <strong>hils.ccsf.edu</strong></li>
+<li>Use a text editor to write your java program. For example, to create a program called "HelloWorld" type the following at your Linux prompt: <strong>nano HelloWorld.java</strong> and then in the nano window type the java code for your program.&nbsp;When you are finished writing your program, save it and exit nano by typing <strong>Ctrl-X</strong> followed by <strong>Y</strong>, then <strong>Enter</strong> to save.</li>
+<li>Compile your program using javac. Continuing with the HelloWorld example, type the following at your Linux prompt: <strong>javac HelloWorld.java</strong><br /> If you just get another Linux prompt, then your program compiled successfully. If you get any error messages, use nano to fix the problems in your java code and compile again.</li>
+<li>Run your program using java. For this example that's: <strong>java HelloWorld</strong> (if that doesn't work, try <code><strong>./java HelloWorld</strong> </code> )</li>
+<li>Once your program works and you're ready to turn it in, it's time to save its source code and output in a file. Start this by using "cat" to display your file on the screen: <strong>cat HelloWorld.java</strong></li>
+<li>Run your program again: <strong>java HelloWorld</strong><br /> Make sure to show a variety of test-cases to demonstrate your program's behavior (by running it as many times as necessary).</li>
+<li>You should turn in the entire program listed by your "cat" command, as well as all your sample output. The easiest way to do this is by copying and pasting. So highlight and copy the program and output, and open a text editor on your computer (such as Notepad) then paste into a new document. Make sure your document contains the entire program and all its output. Save the document in a plain text file.</li>
+<li>Now use your web browser to access <a href="https://ccsf.infrastructure.com">https://ccsf.infrastructure.com</a>&nbsp;and log in to this course in <strong>Canvas</strong>. Click on the assignment you want to turn in. Then click on the <strong>Submit Assignment</strong> button. Select the text file with your program and its output. Then click on Submit Assignment. On the right side of your screen it should now say Submission Turned In!</li>
+<li>Don't forget to log out! In your terminal emulator window, log out of your hills account by typing <strong>exit</strong>. And of course log out of Canvas by clicking <strong>Account</strong> (your face) on the top left, then clicking <strong>Logout</strong>.</li>
+</ol>
+<h2></h2>
+<h2>Sample txt file for turning in your homework assignment:</h2>
+<pre>/* Hello World */
+// Homework Assignment 000
+// Comment: This program prints out a simple message "hello world
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("hello world");
+  }
+}
+----------------
+Output:
+   
+hello world
+  
+</pre>
+
+    </div>
+
+  </body>
+
+</html>

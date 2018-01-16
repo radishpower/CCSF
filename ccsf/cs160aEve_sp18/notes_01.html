@@ -1,0 +1,86 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+     <h1>CS 160A - What is the Shell? - Navigating File Structures</h1>
+     <h2>GUI (Graphical User Interface) and CLI (Command Line Interface)</h2>
+
+     <ul>
+       <li>"Graphical User Interfaces make easy tasks easy, while command line interfaces make difficult tasks posssible"
+       <li>"Taking back control of your computer"
+       <li>"Linux" refers to the kernel and all the other free and open source software found in the typical Linux distribution; that is, the entire Linux ecosystem, not just the GNU components.
+     </ul>
+
+     <h2>The Shell</h2>
+
+     <p>Almost all Linux distributions supply a shell program from the GNU Project called <b>bash</b>. The name <b>bash</b> is an acronym for "Bourne Again Shell", a reference to the fact <b>bash</b> is an enhanced replacement for <b>sh</b>, the original Unix shell program written by Steve Bourne.</p>
+
+     <p>Within a graphical user interface, we require a <em>terminal emulator</em> to interact with the shell. For example:</p>
+
+     <ul>
+       <li>KDE uses konsole
+       <li>GNOME uses gnome-terminal
+     </ul>
+
+     <p>The use of Mice, Focus, Ctrl-c and Ctrl-v depend on your terminal emulator.</p>
+
+    <h2>Simple Commands to Try</h2>
+
+    <ul>
+      <li>date
+      <li>cal
+      <li>df
+      <li>free
+      <li>exit
+    </ul>
+
+    <h3>In-Class Exercise #1: Test out some of these commands. With the help of the course text and the command <b>man</b>, see if you can figure out what each of these commands do</h3>
+
+    <h2>Navigation</h2>
+
+    <p>Like Windows, a Unix-like operating system such as Linux organizes its
+    files in what is called a hierarchical directory structure. This means that
+    they are organized in a tree-like pattern of directories (sometimes called
+    folders in other systems), which may contain files and other directories.
+    The first directory in the file system is called the root directory.  The
+    root directory contains files and subdirectories, which contain more files
+    and subdirectories and so on and so on.</p>
+
+    <p>Useful tools for navigating file structures:</p>
+
+    <ul>
+      <li>pwd - Print name of current working directory
+      <li>cd - Change directory
+      <li>ls - List directory contents
+      <li>file - Determine file type
+      <li>less - View file contents
+    </ul>
+
+    <p>Absolute Pathnames: An absolute pathname begins with the root directory
+    and follows the tree branch by branch until the path to the desired
+    directory or file is completed.</p>
+
+    <p>Relative Pathnames: Where an absolute pathname starts from the root
+    directory and leads to its destination, a relative pathname starts from the
+    working directory</p>
+    <ul>
+      <li>"." (dot) refers to working directory
+      <li>".." (dot dot) refers to parent directory
+    </ul>
+
+    <p>Table 3-4 from Shotts Reference: Directories found on Linux Systems</p>
+  
+    <p><img src="TLCL_46.png"></p>
+    <p><img src="TLCL_47.png"></p>
+
+    </div>
+
+  </body>
+
+</html>

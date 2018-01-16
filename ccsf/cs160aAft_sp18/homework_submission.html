@@ -1,0 +1,62 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+    <h1>Work Area for Assignments and Sample Data</h1>
+
+    <p>Work for all assignments should be done in a designated directory. Our course data is available at: <b>/pub/cs/grwoo/cs160a</b></p>
+
+    <h1>Script Sessions</h1>
+
+    <p>Most in-class exercises and assignments will done as a <b>script</b> session. Each <b>script</b> session must be placed in a separate file.</p>
+    <p>Be careful when using the script sessions. By default, the output name is <b>typescript</b>. <b>script</b> will silently overwrite any existing <b>typescript</b> file which may be used for another part of the assignment. Try and develop a standard naming scheme for yourself that is meaningful and recognizable for teammates.</p>
+    <p>Remember! Make sure that whatever name you choose is not the name of an existing file. Remember, Unix doesn't warn if you do this - it simply erases the file with the same name and starts a new one!</p>
+    <p>Each <b>script</b> session should begin with a standard descriptive header:</p>
+    <ul>
+      <li>A comment containing the assignment label and your name
+      <li>The date (insert using the <b>date</b> command)
+      <li>The current directory (insert using the <b>pwd</b> command)
+      <li>Login ID (insert using commands <b>id</b> or <b>whoami</b>
+    </ul>
+
+    <h5>Example</h5>
+
+    <p>For example, if you are working on Assignment Two. You should begin with the <b>script</b> program and name the script file using a command such as:</p>
+    <b>$ script asmt02.script</b>
+    <p>This command starts <b>script</b> and names the script file <b>asmt02.script</b></p>
+    <p>Unix will respond: <b>Script started, file is asmt02.script</b></p>
+    <p>The first lines you should then type after starting the <b>script</b> program are:</p>
+    <pre>
+$
+$ #********* Assignment Two Jane Doe
+$ 
+$ date
+(the date will appear here)
+$ pwd
+(the name of the current directory will appear here)
+$ id
+(your user name and other information will appear here)
+    </pre>
+
+<h1>Handing in your Script Output File on Canvas</h1>
+
+<p>Handing in your script file on Canvas can be tricky if you are not working from a local machine.</p>
+
+<p>If you are working on a local Linux machine, simply navigate to the Canvas website to upload the output script file.</p>
+
+<p>If you are working from hills, then you must use a file transfer program to move the file to your local machine. One simple way to do that is to use <b>scp</b>. For example, if your file is in your home directory on hills, you can use: </p>
+<pre>scp username@hills.ccsf.edu:typescript .</pre>
+
+<p>If you are on a Windows machine, you may use a program such as <a href="https://winscp.net/eng/download.php">WinSCP</a> to transfer your output file to your local machine. Then, use Canvas to make your first upload.</p>
+
+    </div>
+
+  </body>
+
+</html>

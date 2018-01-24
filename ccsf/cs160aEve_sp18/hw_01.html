@@ -1,0 +1,88 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h2><a href="http://ccsf.avocadocheesecake.com/cs160aEve_sp18/index.html">Main Course Webpage</a></h2>
+      <h1>In-Class Lab 1: Submitting a Script Session</h1>
+      <h2>Objective: Start a Script Session and Submit on Canvas</h2>
+      <p>Login to hills and start a script session. Practice using comments</p>
+      <p>Comment the beginning of your code according to the homework submission guidelines</p>
+      <p>Perform the following basic commands</p>
+      <ol>
+        <li>ssh to hills from either your laptop or from one of our linux PCs
+        <li>Type in and execute the following command exactly:
+          <pre>cp -r /pub/cs/grwoo/cs160a/Lab1 ~
+          </pre>
+      </ol>
+
+      <p>Start your <b>script</b> session using <b>date</b>, <b>pwd</b> and <b>whoami</b>. Be sure to give your script output a meaningful name other than <b>typescript</b></p>
+      <ol>
+        <li><b>cd</b> to the new directory <b>Lab1</b>. List it with the <b>-l</b> (lower-case L) option
+        <li>display the contents of the file <b>README</b>
+        <li>copy the file <b>README</b> to <b>README1</b>
+        <li>rename the file <b>wrong</b> to <b>right</b>
+        <li>find out what kind of file <b>xyz</b> is
+        <li>list the current directory again with the <b>-l</b> option
+        <li>list the current directory again with both the <b>-l</b> and <b>-a</b> options. Can you explain the difference?
+        <li>remove the empty directory <b>dir1</b>
+        <li>remove the file <b>xyz</b>
+      </ol>
+
+      <p>Type <b>exit</b> to exit your script session.</p>
+
+      <h2>Sample Output</h2>
+      <p>Sample Output for Lab 1 may look like:</p>
+      <pre>
+[grwoo@hills Lab1]$ cat typescript_lab01
+Script started on Mon 15 Jan 2018 11:48:26 PM PST
+[grwoo@hills Lab1]$ ls -l
+total 24
+drwx------ 2 grwoo csdept     6 Jan 15 23:24 dir1
+-rw------- 1 grwoo csdept   238 Jan 15 23:24 README
+-rw------- 1 grwoo csdept     0 Jan 15 23:48 typescript_lab01
+-rw------- 1 grwoo csdept    52 Jan 15 23:24 wrong
+-rw------- 1 grwoo csdept 15211 Jan 15 23:24 xyz
+[grwoo@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[grwoo@hills Lab1]$ cp README README1
+[grwoo@hills Lab1]$ mv wrong right
+[grwoo@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[grwoo@hills Lab1]$ ls -l
+total 28
+drwx------ 2 grwoo csdept     6 Jan 15 23:24 dir1
+-rw------- 1 grwoo csdept   238 Jan 15 23:24 README
+-rw------- 1 grwoo csdept   238 Jan 15 23:48 README1
+-rw------- 1 grwoo csdept    52 Jan 15 23:24 right
+-rw------- 1 grwoo csdept     0 Jan 15 23:48 typescript_lab01
+-rw------- 1 grwoo csdept 15211 Jan 15 23:24 xyz
+[grwoo@hills Lab1]$ ls -a
+.  ..  dir1  .hidden  README  README1  right  typescript_lab01  xyz
+[grwoo@hills Lab1]$ rm -rf dir1
+[grwoo@hills Lab1]$ rm xyz
+[grwoo@hills Lab1]$ exit
+exit
+      </pre>
+      <p>
+
+      <h2>Submitting Your Homework Assignment</h2>
+      <p>Transfer your output script session as an attachment on Canvas</p>
+      <p>If you find something particularly interesting, please include that in your homework submission as a comment. I may ask you to share your insights at the beginning of class for participation points.</p>
+    </div>
+
+  </body>
+
+</html>

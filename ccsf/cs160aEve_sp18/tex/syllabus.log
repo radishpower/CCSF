@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 JAN 2018 08:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 JAN 2018 09:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -276,7 +276,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
  [2]
-Overfull \hbox (14.37303pt too wide) in paragraph at lines 219--309
+Overfull \hbox (43.11682pt too wide) in paragraph at lines 219--308
 [][] 
  []
 
@@ -300,7 +300,7 @@ sfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb>
-Output written on syllabus.pdf (4 pages, 127722 bytes).
+Output written on syllabus.pdf (4 pages, 127226 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream

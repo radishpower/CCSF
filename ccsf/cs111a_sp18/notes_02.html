@@ -1,0 +1,137 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h1>CS 111A Lecture Notes - Simple I/O in Java - Chapter 2 part 1</h1>
+      <h3>
+
+<h3>Console Output</h3>
+<ul>
+  <li> <b>System</b> is a class that is part of the <b>java.lang</b> package. "java.lang" is automaticaly
+  imported into every Java program, so its classes are always available. Every time you write a java
+  program, it automatically has access to the members of the <b>System</b> class. Members of a class are
+  either data declarations (also called "fields") or methods.  We use the dot operator to link together the
+  class name, System, with an object of the System class called out, and with a method such as print() of
+  that "out" object:<br>
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("hello");</code>
+  <li> <b>System.out</b> - a pre-defined object to send output to the command-line (console) such as above.
+  <li> The System.out methods, print and println (The extra "ln" means add a blank line at the end) can
+  display any string to the console.
+  <li> Another class that's part of the "java.lang" package is the <b>String</b> class.  We'll learn more
+  about this later, but for now we can use "String" as a datatype to easily store and manipulate a string
+  of characters.
+  <li> Escape Sequences: special character combinations to represent special characters:
+  <ul>
+    <li><code> \n &nbsp;&nbsp;</code> newline
+    <li><code> \t &nbsp;&nbsp;</code> tab
+    <li><code> \\ &nbsp;&nbsp;</code> one backslash
+    <li><code> \" &nbsp;&nbsp;</code> quote character
+  </ul>
+  Example:
+  <pre>
+    System.out.println("Here is the first line of"
+                       + " text.\nHere is the second line.");
+    // notice we can write a string expression over several
+    // lines of code as long as we break outside a set of quotes.
+    // This keeps your program listing from running off the
+    // right edge of the page.
+  </pre>
+  <li> <b>Scanner</b> - a pre-defined class that's part of the <b>java.util</b> package.  Scanner is used to
+  get console (command-line) input
+  from the user.  To use it, you first have to instantiate an object of the Scanner class, then use that
+  object to call one of its methods,
+  such as <b>nextLine()</b>.  See the "Echo" example below to see how this works.
+
+</ul>
+
+<h3>Identifiers</h3>
+<ul>
+  <li><b>Identifier</b> - the name of a variable (or other item), which is made up by the programmer, and
+  should give the reader some hint of what it is used for. (e.g. number_of_candy_bars is a very good,
+  clear variable name.) Java is case sensitive with all identifiers and keywords.
+  <li><b>Indentifier Rules</b> - Identifiers must follow the following rules:
+  They must start with a letter or underscore, and contain only letters, digits, or underscore.  E.g.
+  variables called <b>3X</b> or <b>%change</b> are not allowed.
+  <li><b>Reserved Words</b> - pre-defined names (keywords) in Java must not be used for your own identifier
+  names (for example you can't name a variable "int".)  For a complete list of reserved words,
+  <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">see this Java tutorial page</a>
+</ul>
+
+<h3>Variables</h3>
+<ul>
+  <li><b>Variable</b> - a named location in memory that can be used to store a specified type of data, and
+  whose value may be changed in the course of the program. Variables must be declared before they are used
+  in Java.
+  <li><b>int</b> - a datatype that stores an integer (no decimal value allowed).  Can be positive or
+  negative.
+  <li><b>String</b> - a datatype (class, actually) that stores any sequence of characters, such as a word,
+  a sentence, or a combination of numbers and symbols, etc.
+  <li>Variable declaration examples:<br><code>
+  &nbsp;&nbsp;int x = 5;<br>
+  &nbsp;&nbsp;String s1;<br>
+  &nbsp;&nbsp;int age, height;<br></code>
+</ul>
+
+<a href="Echo.java.html">Echo.java: Here is an example demonstrating the use of variables, and of the Scanner
+class for console input.</a>
+<p>
+
+<h3>Programming Style</h3>
+<ul>
+  <li> Programs are written to be read by other humans as well as the computer.
+  <li> Use my sample programs and those in the book as your guide for style.
+  <li> <b>Indentation</b>: always indent consistently.  It greatly improves readability
+  <li> Indentation reflects the level, or scope, of a line of code.
+  <li> The contents of a set of curly braces "{" and "}" are always indented
+  <li> You should always have <b>Comments</b> at the top of your program, stating your name, the name of
+  your program source file, the name of the class and assignment, and a brief description of what the
+  program does.
+  <li> Comments should also be used to explain hard-to-understand code, and to summarize big steps such as
+  functions and sometimes loops.
+  <li> Use helpful variable names (strive for self-commenting code - clear without comments to explain it.)
+  <li> Provide a good user interface, including prompting for inputs and explaining outputs.
+</ul>
+
+<h3>Using dialog boxes for input and output</h3>
+<ul>
+  <li> <b>JOptionPane</b> - this is a class that contains methods for producing simple GUI windows.
+  It requires that you import the Swing class JOptionPane with the following line at the beginning of your
+  program:<br>
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;import javax.swing.JOptionPane;</code>
+  <li> To display a simple dialog box for output, use <b>JOptionPane.showMessageDialog()</b> for example:
+  <br><code>&nbsp;&nbsp;&nbsp;&nbsp;JOptionPane.showMessageDialog(null, "output string"); <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;// null puts dialog window in center (default parameter value)</code>
+  <li> To display a simple dialog box to get input from the user, use <b>JOptionPane.showInputDialog()</b>
+  for example:<br>
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;String response; // declare a String object variable to store the user's
+  entry<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;response = JOptionPane.showInputDialog("Enter your response");</code>
+  <li> If the user's response is expected to be an integer, use <b>Integer.parseInt()</b> to convert from
+  String to int.  For example (continuing from above):<br>
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;int numericResponse = Integer.parseInt(response);</code>
+  <li> <b>GUI elements like those produced by JOptionPane will not work on hills</b>, because hills doesn't
+  have a way to display graphics like a window.  To test a program with a GUI, you'll have to use a
+  computer other than hills, such as your PC (running "java myprogram" from the DOS prompt).
+  <li> <b>System.exit()</b> - When you write an application that has a GUI, the program waits for user
+  interaction, so you must terminate the application with a call to another static method from the System
+  class: exit. <br>
+  <code>&nbsp;&nbsp;&nbsp;&nbsp;System.exit(0);<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;// argument of 0 indicates successful termination of the program.</code>
+  <li> Example: <a href="HelloWorldApp.java.html">Hello World program with age input/output</a>
+</ul>
+
+<b>In-class exercise:</b> input user's first name, then last name, and store them into two separate variables. Output
+them in reverse order with a comma between them.
+<p>
+
+
+<!--<a href="Names.java.html">Names.java: Solution to above exercise</a>-->
+</div>
+</body>
+</html>

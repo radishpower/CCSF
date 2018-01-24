@@ -1,0 +1,121 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h1><a href="http://ccsf.avocadocheesecake.com/cs160aEve_sp18/index.html">Main Course Webpage</a></h1>
+
+      <h1>CS160A Assignment 1</h1>
+      <h3>This assignment contains three parts. Use the <a href="http://ccsf.avocadocheesecake.com/cs160aEve_sp18/homework_submission.html">Homework Submission Guidelines</a> to help you put together a clean <b>script</b> file. A <b>separate script file</b> may be handed in for each part but make sure your submission is clean and easy to understand. You may find the Slack channel started by your peers helpful.</h3>
+      <h2>Part One (4 points)</h2>
+      <p>Objective: Becoming familiar with simple commands including <b>cd</b>, <b>pwd</b>, <b>ps</b>, <b>cat</b> as well as transferring files between two systems. Remember, the best way to learn about what a command can accomplish is by using the <b>man</b> command. For example, <b>man ps</b> will show that this command can be used to print out current processes.</p>
+      
+      <h5>Before starting your script session for Part One, use these tips!</h5>
+
+      <p>Create a <b>cs160a</b> directory in your home directory on hills and keep your file structure organized by creating a directory <b>asmt01</b> under it and then another directory <b>part1</b> under <b>asmt01</b>. Your tree structure could look like the following:</p>
+
+      <pre>
+      [grwoo@agnes ~]$ tree cs160a
+      cs160a
+      |-- asmt01
+          |-- part1
+      </pre>
+
+      <p>You can practice this part of the assignment before starting a <b>script</b> session. Remember:</p>
+
+      <p><pre>
+      mkdir part1
+      </pre></p>
+
+      <p>creates a directory and:</p>
+
+      <p><pre>
+      rm -r part1
+      </pre></p>
+
+      <p>removes a directory.</p>
+
+      <p>It is very easy to use <b>cat</b> to create a file. You simply redirect <em>stdout</em> to a file using the <b>></b> operator. To create (or overwrite) a file named <b>test</b>, you can do:</p>
+
+      <p><pre>
+      cat > test
+      </pre></p>
+
+      <p>Now <b>cat</b> will read lines from <em>stdin</em> (which you redirected to the file <b>test</b> using the above command). Now, you can type anything you want. When you are finished typing, hit enter (or return) and then use a <b>^D</b>(control-D) to end the file and return to the <b>$</b> prompt. You have created the file <b>test</b>.</p>
+
+      <p>You can quickly show the contents of the file <b>test</b> by doing:</p>
+
+      <p><pre>
+      cat test
+      </pre></p>
+
+      <h5>Start the Assignment (make sure that you are logged into hills to complete this assignment) script</h5>
+
+      <p>Start in your home directory. You should have a <b>cs160a/asmt01</b> directory, but <b>asmt01</b> should not have a <b>part1</b> directory in it. Perform the following sequence in order. Use step markers so that your assignment is easy to follow. You will be graded on how clean your script file is and step markers are very helpful for that.</p>
+
+      <ul>
+        <li><p>Start <b>script</b> to record the session in a file. You can just let it use the default name <b>typescript</b>. We will change it to the final name later.</p>
+        <li>Place the standard descriptive information indicated in <em>Assignment Guidelines</em> at the beginning of the <b>script</b> output:
+        <ul>
+          <li>Use a comment to place the name of the assignment and your name in the output.
+          <li>Use the <b>date</b> command to place the date in the output.
+          <li>Use the <b>pwd</b> command to output the name of the current directory. You should be in your home directory when you begin.
+          <li>Use the <b>id</b> or <b>whoami</b> command to output your user name.
+        </ul>
+      </ul>
+
+      <ul>
+        <li>Step 1. <p>[Enter the step marker first, as with the remaining steps]. Then use commands to go to the <b>cs160a/asmt01</b> directory, then create the new <b>part1</b> directory and go to it. Finally, use the command to show what directory you are in and list the contents of the current directory. <b>Stay in the part1 directory for the rest of this Part One</b></p>
+          <li>Step 2. <p>Now use <b>cat</b> to create the file <b>linux</b>. Then type in the answer to the question <em>"What's one thing that already annoys you about the Linux shell?"</em>. Your answer must consist of multiple lines of text. Don't forget to break your own lines. You must type ENTER (or return) at the end of the line for it to redisplay correctly later. Signal the end-of-file by carefully typing in <b>^D</b>. Then list the contents of the current directory and use <b>cat</b> to redisplay the contents of the file <b>linux</b>.</p>
+            <li>Step 3. <p>Create a file named <b>pinky.txt</b> that contains the output of the command <b>pinky -l xxx</b> where <b>xxx</b> is your hills login (such as <b>jdoe123</b>) and the option is a lower-case L. (Hint: use <b>cat</b> to redirect the output of the command to <b>pinky.txt</b>) Again, list the directory when you are done and redisplay <b>pinky.txt</b> with <b>cat</b>.</p>
+            <li>Step 4. <p><em>Append</em> the <b>pinky.txt</b> file to the <b>linux</b> file. Then display the resulting <b>linux</b> file.</p>
+            <li>Step 5. <p>Execute the command <b>cat linux | wc -l</b> (that's lower-case L). Can you interpret the output? Type a comment into your script session with your answer.</p>
+            <li>Step 6. <p>Rename the <b>linux</b> file to <b>aboutme</b>. Then list the current directory. Then, copy <b>aboutme</b> to your home directory and list your home directory.</p>
+            <li>Step 7. <p>Exit <b>script</b>. After exiting script, <b>cat</b> the script output file to ensure it is readable, then rename it to <b>asmt01p1.script</b>
+              <li>Step 8. <p>You have now created the following directories and files in your home directory: <b>cs160a, cs160a/asmt01, cs160a/asmt01/part1</b>. Check the result <b>asmt01p1.script</b></p>
+
+      </ul>
+
+      <h2>Part Two (2 points)</h2>
+
+      <p>Find out what the course Slack channel is from your peers and either ask or answer a UNIX/LINUX related question. Make sure to use your CCSF username so that I can give you points for this part.</p>
+
+      <h2>Part Three (4 points)</h3>
+
+      <p>For this assignment, you will copy an entire tree directory structure to your area and operate on it according to the instructions. Make sure you keep in mind the visualization of your directory tree structure. It might be helpful to run through this exercise a few times before starting your <b>script</b> session</p>
+
+      <p>It is essential when using Linux at the command-line that you know where you are in the file structure. Once you login to the Linux machines, you can use the installed binary <b>tree</b> to draw out visualizations of the directory file structures. Download <b>part3</b> using either of the following commands:</p>
+      <p>Grab <strong>part3</strong> using <strong>wget</strong> and <strong>unzip</strong> or from the public course area</p>
+<!--(also available <a href="http://ccsf.avocadocheesecake.com/cs160a_f17/assignment1_p3.zip">here</a>):</p>-->
+      <p>
+<pre>
+cp -r /pub/cs/grwoo/cs160a/asmt01 .
+</pre>
+      </p>
+
+      <ul>
+        <li>Step 1. <p>Copy all the JPEG image files from the <b>images</b> directory to the <b>personal</b> directory. Then, use a second command to list the <b>personal</b> directory with attributes (a long listing with the options <b>-ls -l</b>).</p>
+          <li>Step 2. <p>List the attributes (<b>ls -l</b>) of each file in the <b>resumes</b> directory whose name starts with <b>by</b></p>
+          <li>Step 3. <p>Move all the files in <b>resumes/old</b> to the <b>resumes</b> directory. Then, using a second command, delete the empty <b>resumes/old</b> directory. Finally (with another command), list <b>resumes</b>.</p>
+          <li>Step 4. <p>Move all the files in all subdirectories of <b>reports</b> to the <b>reports</b> directory. Then in a second command, remove all the empty subdirectories of <b>reports</b>.</p>
+          <li>Step 5. <p>List all the files in the <b>tmp</b> directory whose name starts witha n uppercase character.</p>
+          <li>Step 6. <p>List all the files in the <b>tmp</b> directory whose name contains a character that is not ASCII</p>
+            <li>Step 7. <p>Delete all the files in the <b>tmp</b> directory whose name contains a character that is neither a letter nor a number. Then, using a second command, list the <b>tmp</b> directory.</p>
+              <li>Step 8. <p>List the <b>part3</b> directory recursively, adding the option to mark directories. Then exit <b>script</b></p>
+      </ul>
+
+      <p>Redo this part until you reduce the number of mistakes. Don't forget to delete your <b>part3</b> directory completely between attempts.</p>
+      <p>Rename the script output file to <b>asmt01p3.script</b> when you are finished. After examining it, transfer it to your local machine and upload to Canvas</p>
+
+      <h1>Upload your two files asmt01p1.script and asmt01p3.script to Canvas. Your homework will be graded based upon readability. Use step markers as much as you can!</h1>
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>HelloWorldApp.java</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#444444">/* Craig Persiko
+   HelloWorldApp.java
+   Sample program to demonstrate JOptionPane
+   input and output, and console output.
+
+   NOTE: This GUI i/o will not work on hills.
+*/</font>
+
+<font color="0000ff"><strong>import javax.swing.JOptionPane;</strong></font>
+
+<strong>public</strong> <strong>class</strong> <font color="#2040a0">HelloWorldApp</font> <font color="4444FF"><strong>{</strong></font>
+    <strong>public</strong> <strong>static</strong> <strong>void</strong> <font color="#2040a0">main</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">String</font><font color="4444FF"><strong>[</strong></font><font color="4444FF"><strong>]</strong></font> <font color="#2040a0">args</font><font color="4444FF"><strong>)</strong></font> <font color="4444FF"><strong>{</strong></font>
+        <font color="#2040a0">String</font> <font color="#2040a0">response</font><font color="4444FF">;</font>
+        <strong>int</strong> <font color="#2040a0">age</font><font color="4444FF">;</font>
+
+        <font color="#2040a0">JOptionPane</font>.<font color="#2040a0">showMessageDialog</font><font color="4444FF"><strong>(</strong></font><strong>null</strong>, <font color="#008000">&quot;Hello World!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <font color="#2040a0">response</font> <font color="4444FF">=</font> <font color="#2040a0">JOptionPane</font>.<font color="#2040a0">showInputDialog</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Enter your age&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <font color="#2040a0">age</font> <font color="4444FF">=</font> <font color="#2040a0">Integer</font>.<font color="#2040a0">parseInt</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">response</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;In 2 years, you'll be: &quot;</font> <font color="4444FF">+</font> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">age</font> <font color="4444FF">+</font> <font color="#FF0000">2</font><font color="4444FF"><strong>)</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <font color="#444444">// parentheses are needed above to add age + 2</font>
+        <font color="#444444">// before adding to string (try without inner parentheses)</font>
+
+        <font color="#2040a0">System</font>.<font color="#2040a0">exit</font><font color="4444FF"><strong>(</strong></font><font color="#FF0000">0</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>  <font color="#444444">// needed to end program when GUI used</font>
+    <font color="4444FF"><strong>}</strong></font>
+<font color="4444FF"><strong>}</strong></font>
+
+
+
+</pre>
+<hr>
+syntax highlighted by <a href="http://www.palfrader.org/code2html">Code2HTML</a>, v. 0.9
+</body>
+</html>

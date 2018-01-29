@@ -1,0 +1,13 @@
+/* Craig Persiko
+   HelloWorld.java
+
+   Simple Hello World program
+*/
+
+class HelloWorld
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Hello World!");   //Display the string.
+  }
+}

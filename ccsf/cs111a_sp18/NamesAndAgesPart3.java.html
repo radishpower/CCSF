@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>NamesAndAgesPart3.java</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#444444">/* Craig Persiko
+   CS 111A In-class exercise solution:
+   Write a program to input the names and ages of 2 people.
+   Then output if one or both people are between 18 and 65 years old.
+*/</font>
+
+<font color="0000ff"><strong>import java.util.Scanner;</strong></font>
+
+<strong>public</strong> <strong>class</strong> <font color="#2040a0">NamesAndAgesPart3</font>
+<font color="4444FF"><strong>{</strong></font>
+  <strong>public</strong> <strong>static</strong> <strong>void</strong> <font color="#2040a0">main</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">String</font><font color="4444FF"><strong>[</strong></font><font color="4444FF"><strong>]</strong></font> <font color="#2040a0">args</font><font color="4444FF"><strong>)</strong></font>
+  <font color="4444FF"><strong>{</strong></font>
+    <font color="#2040a0">Scanner</font> <font color="#2040a0">scan</font> <font color="4444FF">=</font> <strong>new</strong> <font color="#2040a0">Scanner</font> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">System</font>.<font color="#2040a0">in</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">String</font> <font color="#2040a0">name1</font>, <font color="#2040a0">name2</font><font color="4444FF">;</font>
+    <strong>int</strong> <font color="#2040a0">age1</font>, <font color="#2040a0">age2</font><font color="4444FF">;</font>
+    <strong>boolean</strong> <font color="#2040a0">workingAge2</font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Please enter first person's name: &quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">name1</font> <font color="4444FF">=</font> <font color="#2040a0">scan</font>.<font color="#2040a0">nextLine</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Please enter first person's age: &quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">age1</font> <font color="4444FF">=</font> <font color="#2040a0">scan</font>.<font color="#2040a0">nextInt</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">scan</font>.<font color="#2040a0">nextLine</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font> <font color="#444444">//dispose of newline char</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Please enter second person's name: &quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">name2</font> <font color="4444FF">=</font> <font color="#2040a0">scan</font>.<font color="#2040a0">nextLine</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Please enter second person's age: &quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">age2</font> <font color="4444FF">=</font> <font color="#2040a0">scan</font>.<font color="#2040a0">nextInt</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">workingAge2</font> <font color="4444FF">=</font> <font color="#2040a0">age2</font> <font color="4444FF">&gt;</font><font color="4444FF">=</font> <font color="#FF0000">18</font> <font color="4444FF">&amp;</font><font color="4444FF">&amp;</font> <font color="#2040a0">age2</font> <font color="4444FF">&lt;</font><font color="4444FF">=</font> <font color="#FF0000">65</font><font color="4444FF">;</font>
+
+    <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">age1</font> <font color="4444FF">&gt;</font><font color="4444FF">=</font> <font color="#FF0000">18</font> <font color="4444FF">&amp;</font><font color="4444FF">&amp;</font> <font color="#2040a0">age1</font> <font color="4444FF">&lt;</font><font color="4444FF">=</font> <font color="#FF0000">65</font><font color="4444FF"><strong>)</strong></font>
+      <strong>if</strong> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">workingAge2</font><font color="4444FF"><strong>)</strong></font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Both people are between 18 and 65&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+      <strong>else</strong>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">name1</font> <font color="4444FF">+</font> <font color="#008000">&quot; is between 18 and 65, but &quot;</font> <font color="4444FF">+</font> <font color="#2040a0">name2</font> <font color="4444FF">+</font> <font color="#008000">&quot; is not.&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <strong>else</strong> <strong>if</strong> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">workingAge2</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">name2</font> <font color="4444FF">+</font> <font color="#008000">&quot; is between 18 and 65, but &quot;</font> <font color="4444FF">+</font> <font color="#2040a0">name1</font> <font color="4444FF">+</font> <font color="#008000">&quot; is not.&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <strong>else</strong>
+      <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Neither person is between 18 and 65.&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="4444FF"><strong>}</strong></font>
+<font color="4444FF"><strong>}</strong></font>
+
+<font color="#444444">/* Sample Output:
+
+-bash-3.2$ java NamesAndAgesPart3
+Please enter first person's name:
+Craig
+Please enter first person's age:
+37
+Please enter second person's name:
+Serafina
+Please enter second person's age:
+7
+Craig is between 18 and 65, but Serafina is not.
+-bash-3.2$ java NamesAndAgesPart3
+Please enter first person's name:
+Tobias
+Please enter first person's age:
+5
+Please enter second person's name:
+Serafina
+Please enter second person's age:
+7
+Neither person is between 18 and 65.
+-bash-3.2$ java NamesAndAgesPart3
+Please enter first person's name:
+Geoff
+Please enter first person's age:
+37
+Please enter second person's name:
+Craig
+Please enter second person's age:
+37
+Both people are between 18 and 65
+-bash-3.2$
+
+*/</font>
+
+</pre>
+<hr>
+syntax highlighted by <a href="http://www.palfrader.org/code2html">Code2HTML</a>, v. 0.9
+</body>
+</html>

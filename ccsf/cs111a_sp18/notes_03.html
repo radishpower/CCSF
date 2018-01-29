@@ -1,0 +1,202 @@
+<HTML><HEAD><TITLE>CS 111A Lecture Notes - Calculations - Chapter 2 part 2 - Craig Persiko</TITLE>
+</HEAD>
+<BODY>
+<h1>CS 111A Lecture Notes - Calculations - Chapter 2 part 2</h1>
+
+<h3>Primitive Datatypes</h3>
+<ul>
+  <li> <b>Floating Point</b> - a term referring to real number approximations stored in computers.
+  <li><b>float</b> - floating point number, uses 4 bytes in the range of
+  +/-3.4e-38 to +/-3.4e38
+  <li><b>double</b> - floating point number, uses 8 bytes in the range of +/-1.7e-308 to +/-1.7.4e308
+  <li><b>byte</b> - integer number, uses 1 byte (range -128 to 127)
+  <li><b>short</b> - integer number, uses 2 bytes
+  <li><b>int</b> - integer number, uses 4 bytes (range approx. -2.1 billion to 2.1 billion)
+  <li><b>long</b> - integer number, uses 8 bytes
+  <li><b>char</b> - stores one character (one keyboard key) using 2 bytes (unicode character set).
+  Character literals are enclosed with apostrophes, e.g. 'w'
+  <li><b>boolean</b> - stores a Boolean value, e.g. true or false
+  <li> The Scanner class has methods to input directly into an int: scan.nextInt(), and also to input directly
+  into a double: scan.nextDouble()
+</ul>
+
+<h3>Calculations, Assignments</h3>
+<ul>
+  <li> Arithmetic operators:<br>
+  <code> &nbsp;&nbsp; * &nbsp;&nbsp; </code> for multiplication<br>
+  <code> &nbsp;&nbsp; + &nbsp;&nbsp; </code> for addition<br>
+  <code> &nbsp;&nbsp; - &nbsp;&nbsp; </code> for subtraction<br>
+  <code> &nbsp;&nbsp; / &nbsp;&nbsp; </code> for division (beware of integer division, as explained below)
+  <br>
+  <code> &nbsp;&nbsp; % &nbsp;&nbsp; </code> for modulus (the remainder from integer division) <br>
+  <code> &nbsp;&nbsp; =  &nbsp;&nbsp; </code> for assignment (stroring the result of operation at right in
+  variable at left; think of it like an arrow to the left)
+  <li> Integer division produces an integer result.  To get a floating point (real number) result, one or
+  both operands must be a floating point value.
+  <li> Semi-colons terminate most lines of code.
+  <li> The order of operations is just like in mathematics: multiplication (*), division (/), and modulus(%) are processed first, followed by addition (+) and subtraction (-).  After all of that, the assignment operator (=) is processed.  Parentheses may be used to specify a different of order of operations.
+</ul>
+
+<h3>Shortcut Operators</h3>
+<ul>
+  <li><b><code>+=</code></b> adds a value to a variable. Similarly, to subtract from or multiply or divide
+  by a value, or take the modulus of a value, use: <CODE>-=</CODE> or <CODE>*=</CODE> or <CODE>/=</CODE> or
+  <CODE>%=</CODE>
+  <li><b><code>++</code></b> increments a variable. So <CODE>x++;</CODE> is equivalent to <CODE>x += 1;
+  </CODE> and <CODE>x = x + 1;</CODE>
+  <li><b><code>--</code></b> decrements a variable
+</ul>
+
+  <h3>Formatting Output using printf</h3>
+<ul>
+  <li> <b>printf</b> is a function that is used in the C language to format output, and its popularity has led
+  it to be used in Java and other languages.  With printf, you specify a string to output, with special codes
+  in the string.
+  <li> Those codes are called <b>format specifiers</b>. They are placeholders for variables which are to be
+  output, and also specify how those variables should be formatted when they are output. Format specifiers
+  begin with the percent-sign (%) and end with the format type.
+  <li> Here is a list of the most common format types:
+  <ul>
+    <li><B>d</B> - decimal <b>integer</b> - as distinguished from binary, octal, or hexidecimal integers.
+    <li><B>f</B> - fixed <b>floating point</b> - displayed without scientific notation
+    <li><b>s</b> - <b>string</b>
+  </ul>
+  <li> Between the percent-sign and format type, you can insert many optional items, such as width, optionally
+  followed by a decimal point and the number of digits to display after that decimal point. For example,
+  %10.2f would show a floating point number right-aligned in a field of 10 characters, with 2 digits after the
+  decimal point.
+  <li> Between the percent-sign and the width, you can also insert a comma to indicate that groups of 3 digits
+  (thousands) are to be separated by commas, and/or a minus-sign to make output left-aligned instead of the
+  default right-alignment.  For example, %-,15d would show an integer number left-aligned in a field of 15
+  characters, with commas separating groups of 3 digits.
+  <li> Because printf uses string codes to denote formatting, these codes are not checked at compile time.
+  Make sure to test your output thoroughly.
+  <li> After your output string is complete, you close the quote for it, and have a comma-seprated list of the
+  variables or exressions you want to insert into the string: one for each format specifier.
+  <li> Example: <a href="CalcFormatDemo.java.html">CalcFormatDemo.java</a>
+
+</ul>
+
+  <li> <b>In-class exercise 1:</b> Write a program that has the user enter 3 numeric homework grades, and outputs their 
+average.
+  Make sure to use a floating point data type for the grades.  Use "printf" to show the average rounded to the nearest 
+tenth (showing just 1 digit after the decimal point)
+
+
+<!--  <li> <a href="GradeAverage.java.html">GradeAverage.java: Solution to above in-class exercise averaging grades</a>-->
+
+
+<h3>Mathematical Functions (Methods)</h3>
+<ul>
+  <li><b>method</b> or <b>function</b> - like in algebra, a function can take input (arguments) and produce
+  output (return value).  It performs a calculation or executes other code. We'll write our own functions
+  later, but for now we are going to use pre-defined functions.  A "method" is a function that's defined
+  inside a class.  Since all functions are defined inside classes in Java, the words "method" and "function"
+  are interchangeable in Java.
+  <li><b>function call</b> - a line of code that executes a function
+  <li><b>arguments</b> - the data passed into a function when it is called. Also called <b>actual
+  parameters</b>
+  <li><b>return value</b> - the "answer" produced by the function, returned from it to the function call.
+  <li> The class <b>Math</b> is defined for you, with methods for common mathematical operations.
+  <li><b>Math.pow</b> function - pre-defined mathematical function to calculate an exponent. For example, to
+  store in the variable x the result of 2 to the 3rd power:<br><code>&nbsp;&nbsp;
+  x = Math.pow(2, 3);</code>
+  <li> Another useful mathematical function is sqrt, which returns the square root of a number.
+  <li> You can find <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Math.html">
+  full documentation on the Math class in the Java API Reference</a>
+</ul>
+
+
+<h3>Type Casting</h3>
+<ul>
+  <li><b>Type Cast</b> - an expression to make a value look like it has a different datatype.  Type
+  casting never changes the datatype of a variable -- that's impossible.  Instead, a type cast is like a
+  function that returns the same value in a different datatype.
+  <li> The notation for type casts uses the type name only. E.g. to cast the
+  variable x to type double, you write: <b><code>(double)x</code></b>
+  <li>Example use of casting: avoiding truncation in integer division.  Remember that the result of a
+  division operation will be truncated to an integer if both the operands were integers.  So to get an
+  accurate floating point result, cast one of the operands to a floating-point type.  So for example when
+  finding the average word length in a document:
+  <pre>
+  int num_chars, num_words;
+  double avg_length;
+  String input;
+
+  input = JOptionPane.showInputDialog("How many characters are in the document?");
+  num_chars = Integer.parseInt(input);
+  input = JOptionPane.showInputDialog("and how many words are there?");
+  num_words = Integer.parseInt(input);
+
+  avg_length = (double)num_chars / num_words;
+
+  JOptionPane.showMessageDialog(null, "The average word length is " +  avg_length + " characters.");
+
+  /* Sample Output:
+
+  How many characters are in the document? 100
+  and how many words are there? 28
+  The average word length is 3.57143 characters.
+
+  */
+  // without the type cast, the average word length calculated would have been 3
+  </pre>
+</ul>
+
+<h3>Constants</h3>
+<ul>
+  <li>A constant is a named location in memory that has a datatype (just like a variable) except that its
+  value cannot be changed after it is initialized.  Use the keyword <b>final</b> before the datatype to
+  declare a constant.
+</ul>
+
+<b>In-class exercise 2:</b> You're planning a wedding, and you need to transport all your wedding guests from the
+ceremony to the reception.  A bus can carry 40 passengers. Your program should ask the user how many
+guests are expected, and it should output how many busses are needed, and the number of extra people
+you could carry with those busses.  You may find it helpful to use the 
+<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#ceil-double-">Math.ceil</a>
+ method (which rounds a double up to the next higher integer)<p>
+
+
+ <!--<a href="Busses.java.html">Busses.java: Solution to above in-class exercise</a>-->
+
+
+<h3>Reference Variables, Memory Allocation, and Variable Scope</h3>
+<ul>
+  <li>A <b>reference variable</b> stores the memory address of an object or array.  It's similar to the C++
+  concept of a pointer.  (It's the closest thing Java has to pointers.)  Unlike C++ pointers, reference
+  variables do not need to be de-referenced.
+  <li><b>new</b> - a keyword used to dynamically allocate memory for an object. Returns a reference to
+  that object.  Used with all constructor calls in Java, except it's optional with the String class.
+  <li><b>null</b> - keyword indicating an empty reference.  I.e. a reference variable whose value is null
+  is one that doesn't refer to an object.
+  <li>A null reference is often returned to indicate no value can be returned.  E.g. when we click "Cancel"
+  on an InputDialog, the showInputDialog method returns null.
+  <li>In Java, strings are stored in the standard String class, so strings are stored as objects, and we
+  use reference variables to refer to them.
+</ul>
+
+<h3>String methods</h3>
+<ul>
+  <li> <b>charAt(i)</b> - returns the character at position "i" in the string (starting from 0)
+  <li> <B>length()</B> - returns the integer length of the string (number of characters in it)
+  <li> <B>toLowerCase()</B> - returns the same string with all letters in lower case.
+  <li> <B>toUpperCase()</B> - returns the same string with all letters in upper case.
+  <li>To make it easier to work with Strings and get the expected behavior, the String class is designed
+  so it is immutable, meaning strings are never modified after they're created.
+  <li>For example, the String method toUpperCase does not modify the string it is called upon; it returns
+  a reference to a new String object which is the upper case version of the original.
+  <li> <b>indexOf(s)</b> - returns the 0-based index where the string or character "s" is found in the
+  string. (Location of first occurrence of s.)
+  <li> <b>substring(i)</b> - returns the string from character at position "i" to the end.
+  <li> <b>substring(i, j)</b> - returns the string from character at position "i" to character at position
+  "j" (not including the character at "j").
+  <li> <b>equals(s)</b> - returns true if the string is equal to the string "s" or false if they are not the
+  same (case in-sensitive version is <b>equalsIgnoreCase</b>)  <b>Do not use == to compare strings!</b>
+  <li> Example: <a href="StringDemo.java.html">StringDemo.java: Shows various ways to manipulate strings.</a>
+
+</ul>
+
+<p>
+<!--<a href="index.html">Return to CS 111A page</a>-->
+</BODY></HTML>

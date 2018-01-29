@@ -1,0 +1,194 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h1>CS 160A - Using Wildcards</h1>
+      <h2>Objective: Learning about shell wildcards</h2>
+
+      <p>Wildcards (which may also be called shell metacharacters, or, more accurately, globbing characters ) are special characters used in filename patterns. When the shell encounters a wildcard pattern on a command-line, it replaces it, if possible, with a list of paths that match the wildcard pattern.</p>
+
+      <p>Some notes on where to use Wildcards:</p>
+
+      <ul>
+        <li>the globbing functions in the C library expand wildcards. The use of these functions is limited to a few programs - shells and the <b>find</b> command in particular. Almost no other commands will expand wildcards, For more information, check out <b>glob(7)</b> (use the command <b>man 7 glob</b>)
+        <li>the wildcard operators [globbing characters], what they mean and how to use them.
+        <li>ways to suppress the interpretation of wildcard operators by quoting them.
+      </ul>
+
+      <h2>Wildcard Operators</h2>
+
+      <p>The following sequences of characters are interpreted as wildcards by
+      the shell. Enclosing characters in any type of quotes (single- or
+      double-) hides them from the shell.</p>
+
+      <table>
+        <tr>
+          <th>Operator</th>
+          <th>Meaning</th>
+          <th>Example</th>
+          <th>Matches Objects Whose Names Are</th>
+        </tr>
+        <tr>
+          <td><b>*</b></td>
+          <td>anything, including nothing</td>
+          <td><b>A*</b></td>
+          <td>capital <b>A</b> followed by any number (including zero) of any combination of characters</td>
+        </tr>
+        <tr>
+          <td>?</td>
+          <td>a single character</td>
+          <td><b>???</b></td>
+          <td>exactly three characters long</td>
+        </tr>
+        <tr>
+          <td>a string of characters enclosed in <b>[ ]</b></td>
+          <td>a single character that is one of the characters enclosed in the brackets.</td>
+          <td><b>[abc]</b></td>
+          <td>a single character that is either <b>a</b> or <b>b</b> or <b>c</b></td>
+
+
+        </tr>
+        <tr>
+          <td>two characters separated by a dash enclosed in <b>[ ]</b></td>
+          <td>one character whose value is greater than or equal to the first character and less than or equal to the second character</td>
+          <td><b>[a-z]</b></td>
+          <td>a single character whose value is greater than or equal to
+            <b>'a'</b> and less than or equal to <b>'z'</b> . (i.e., a
+            lowercase character) Note: uppercase characters have consecutive
+            values, as do lowercase characters, as do digits. However,
+            <b>[a-Z]</b> does not do what you want. Use <b>[a-zA-Z]</b>
+            instead.</td>
+        </tr>
+        <tr>
+          <td>a character class enclosed in <b>[ ]</b></td>
+          <td>a single character that is a member of that character class</td>
+          <td><b>[[:alpha:]]</b></td>
+          <td><p>the character class is alpha. It is indicated by [:alpha:] The inner brackets indicate the character class. The outer brackets indicate the character set (that it is a single character) Both sets of brackets are needed.</p>
+            <p>Classes include: alpha, upper, lower, digit, alnum, blank, space(whitespace), punct, print, ascii, cntrl, ascii | See <a href="http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html">Character Classes</a></p></td>
+        </tr>
+        <tr>
+          <td>if the first character inside of the [ ] is ! or ^</td>
+          <td>! negates the character set. a single character that is not a member of the set.</td>
+          <td><b>[^[:lower:]]</b></td>
+          <td>a single character that is not a member of the character class <b>[:lower:]</b> Thus, any character that is not lowercase.</td>
+        </tr>
+      </table>
+
+      <p>Note: <b>*</b> and <b>?</b> will not match a leading <b>.</b> in a name (indicating a hidden file)</p>
+      <p>Note: <b>!</b> is the traditional negation operator in character sets. <b>^</b> is also recognized by bash for this function to make it consistent with regular expressions, which we will cover later. We will use them interchangeably, but <b>^</b> is more important to know.</p>
+
+      <p>bash also offers brace expansion, which uses braces to enclose a comma-separated list of alternatives. Brace expansion is not a wildcard, as this sequence is expanded whether or not each possibility exists, rather it is a pattern generator:</p>
+      <ul>
+        <li><b>{xyz,abc}</b> expands to the list <b>xyz</b> <b>abc</b>
+        <li><b>abc{xyz,abc}</b> expands to the list <b>abcxyz</b> <b>abcabc</b>
+        <li><b>*.{doc,html}</b> expands to <b>*.doc *.html</b> which are then expanded as wildcards
+      </ul>
+
+    <h2>Think through these wildcard expansions with the aid of the table above:</h2>
+    <ol>
+      <li><p><b>[[:alpha:]]*</b></p>
+      <li><p><b>[^012]?</b></p>
+      <li><p><b>z*a?</b></p>
+      <li><p><b>[0-9!a-z]*</b></p>
+      <li><p><b>*a*z</b></p>
+      <li><p><b>[[:alpha:]]</b></p>
+      <li><p><b>*[^[:digit:][:punct:]]*</b></p>
+    </ol>
+
+    <h2>More Wildcard Exercises</h2>
+ 
+    <p>Use the sample wildcard directory in our public workspace <b>/pub/cs/grwoo/cs160a/wildcards</b></p>
+
+    <ol>
+      <li>Take the wildcard pattern from #2 and issue the following commands:
+        <ul>
+          <li>precede the wildcard with <b>ls</b>. It looks like <b>ls</b> understands wildcards.
+          <li>precede the wildcard with <b>echo</b>. This shows that the shell expands wildcards.
+          <li>precede the wildcard with <b>echo ls</b>. This shows that the shell expands the wildcard before it passes it to <b>ls</b>.
+          <li>precede the wildcard with <b>ls</b> and put single quotes around the wildcard. This suppresses the shell's wildcard expansion and shows you that <b>ls</b> doesn't know anything about wildcards.
+        </ul>
+
+      <li>Take the wildcard pattern from #3 and issue the following commands:
+        <ul>
+          <li>precede the wildcard with <b>ls</b>. Do the paths output seem to make sense?
+          <li>precede the wildcard with <b>echo</b>. Can you reconcile the output with that using <b>ls</b>?
+          <li>precede the wildcard with <b>echo ls</b>. This shows the command as it is executed.
+          <li>Can you put the above together and come up with an explanation? Test your theory by using the command <b>ls -dF</b> followed by the wildcard. What do these options do?
+        </ul>
+        <p>From this point on we will be practicing using wildcards with the <b>ls</b> command. As you just learned, it will be less confusing if you use the options <b>-dF</b> when using <b>ls</b> in the remainder of this exercise.</p>
+        <p>Write commands to list objects in the current directory whose names</p>
+      <li>are three characters long
+      <li>start with a letter, either upper-or lower-case
+      <li>contain a digit anywhere in the name
+      <li>end with a character that is not a digit
+      <li>contain a blank
+      <li>start with a .
+      <li>start with a . and are a total of three characters long
+      <li>contain at least one character that is neither a letter nor a digit
+      <li>contains a left or right square bracket <b>[</b> or <b>]</b>
+      <li>contain at least one instance of each of <b>a</b> and <b>q</b> in the name, in either order (you need two wildcards to do this!)
+      <p>Next, write commands to list objects whose paths are</p>
+      <li>in a subdirectory of the current directory. The name of the object can be anything.
+      <li>in a subdirectory of the current directory whose name starts with a digit. The name of the object must be five characters long and start with a letter.
+      <p>Last, to show you that this really has nothing at all to do with <b>ls:</b>
+      <li>output the contents of all objects in the current directory whose name starts with <b>a</b>
+
+    </ol>
+
+    <h2>Answers</h2>
+
+    <p>The set of wildcards match anything in the current directory whose name</p>
+    <ol>
+      <!--
+      <li>begins with a lower-case letter
+      <li>is a total of two characters long. The first character may not be <b>0</b> <b>1</b> or <b>2</b>
+      <li>begins with a <b>z</b> and ends with an <b>a</b> followed by any single character
+      <li>starts with a digit, lowercase letter or the <b>!</b> character (the <b>!</b> must come at the beginning of the character set to negate it)
+      <li>contains an <b>a</b> and ends with a <b>z</b>
+      <li>is a single alphabetic character
+        <li>contains a character that is neither a digit nor a punctuation character-->
+      <li>Here are the commands that you should have used and some interpretation:
+        <ul>
+          <li><b>ls [^012]? - ls</b> seems to understand wildcards (but it doesn't)
+          <li><b>echo [^012]? - echo</b> outputs the list of names that match the pattern!
+          <li><b>echo ls [^012]? - echo</b> outputs what an ls command looks like after the shell has expanded the wildcard. Are there any wildcards left for <b>ls</b> to worry about?
+        </ul>
+      <li>Here are the commands that you should have used and some interpretation:
+        <ul>
+          <li><b>ls z*a? - ls</b> outputs names, but they don't appear to match the pattern!
+          <li><b>echo z*a? - echo</b> outputs the list of names that match the pattern!
+          <li><b>echo ls z*a? - echo</b> outputs what an ls command looks like after the shell has expanded the wildcard. If this is the command as it is executed, why does <b>ls</b> put out strange names?
+            <li>adding the options <b>-dF</b> shows that the object that matches the wildcard is a directory. Remember that <b>ls</b> outputs the contents of the directory by default. The <b>-d</b> suppresses this behavior and the <b>-F</b> puts the <b>/</b> at the end to indicate the directory.
+        </ul>
+          <li><pre>ls -dF ???</pre>
+          <li><pre>ls -dF [a-zA-Z]*            # or [[:alpha:]]*</pre>
+          <li><pre>ls -dF *[0-9]*              # or *[[:digit:]]*</pre>
+          <li><pre>ls -dF *[^0-9]             # or *[^[:digit:]]</pre>
+          <li><pre>ls -dF *''*                  # Note you must use quotes to 'hide' the blank OR
+ls -df *\ *                    # use a backslash before the blank. You can also use the
+ls -dF *[[:blank:]]*         # :blank: class. Careful, *[' ']* or *[\ ]* do not work!</pre>
+          <li><pre>ls -dF .*</pre>
+          <li><pre>ls -dF .??                  # Why did this file not appear in the output of #8?</pre>
+          <li><pre>ls -dF *[^a-zA-Z0-9]*               # can you do this using character classes?</pre> 
+          <li><pre>ls -dF *[][]*           # a character set containing the characters [ and ]</pre>
+          <li><pre>ls -dF *a*q* *q*a*</pre>
+          <li><pre>ls -dF */*</pre>
+          <li><pre>ls -dF [0-9]*/[a-zA-Z]???? # or [[:digit:]]*/[[:alpha:]]????</pre>
+          <li><pre>cat a*</pre>
+          
+    </ol>
+
+    </div>
+
+
+    <p>For the original version of these materials, see Greg Boyd's <a href="Exercises-Wildcards.pdf">Exercises Wildcards</a></p>
+
+  </body>
+
+</html>

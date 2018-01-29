@@ -1,0 +1,56 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h2><a href="http://ccsf.avocadocheesecake.com/cs160aAft_sp18/index.html">Main Course Webpage</a></h2>
+      <h2><a href="https://cs160spring2018.slack.com/">Course Slack Channel</a></h2>
+      <h1>In-Class Lab 2: Practicing SCP and SFTP</h1>
+      <h2>Objective: Getting Familiar with SCP and SFTP</h2>
+
+      <p>Parts One and Two practice transferring files between systems. You will start each logged onto a linux system. This means if you are using your laptop, you must ssh to hills, then to a linux system to start.</p>
+
+      <p>We will work through some of these together in-class but feel free to quietly move ahead. When you are ready, record your session using <b>script</b> and practice using good commenting etiquette.</p>
+
+      <h3>Part One: SFTP</h3>
+
+      <p>You should be logged into your linux (not hills!) account and connected to your home directory when you start this exercise. This exercise practices <b>sftp</b>.</p>
+
+      <ol>
+
+        <li><p>Create a directory in your home directory named <b>stest</b>. Connect to <b>stest</b>.</p>
+        <li><p>Create a simple text file named <b>sample</b> that contains a few lines of text. The file should include your name or some other identifying text. (Note: you should not have a file named <b>sample</b> in your home directory on either linux or hills. If you do, you will overwrite it now or in a later step.)</p>
+        <li><p>Change directory back to your home directory on linux.</p>
+        <li><p>Open an <b>sftp</b> connection to <b>hills.ccsf.edu</b>.</p>
+        <li><p>From within <b>sftp</b>, list the path of the current directory on hills and its contents. Then list the path of the current directory on linux and its contents.</p>
+        <li><p>Still in <b>sftp</b>, change the current directory on linux to your <b>stest</b> directory. List the contents of the current directory on linux.</p>
+        <li><p>Transfer the <b>sample</b> file from linux to hills. Still in <b>sftp</b>, list it on hills to be sure it is there. Then exit <b>sftp</b>. (Note that this transferred the file <b>~/stest/sample</b> on linux to <b>~/sample</b> on hills ) What directory are you in on linux after you exit <b>sftp</b>?</p>
+        <li><p>Using <b>ssh</b>, connect to hills. Cat your <b>sample</b> file. Then delete your sample file from hills. Then exit back to linux.</p>
+      </ol>
+
+      <h3>Part Two: SCP</h3>
+
+      <p>When you start this exercise, you should be logged onto linux and connected to your home directory. Your file <b>~/stest/sample</b> should be intact on linux. Before you begin, write down the IP address of your linux machine. It should be taped to the top or front of the machine, and should be a number like <b>147.144.23.43</b> (I'll go over in class some other ways to get your IP address). If you are logged in remotely, use the command <b>ip addr | grep inet</b> and look for an address that starts with <b>147.144.23.</b> (ignore the <b>/24</b> after it))</p>
+
+      <ol>
+<li><p>Staying in your home directory, transfer the file <b>~/stest/sample</b> from linux to your home directory on hills using <b>scp</b>. (If <b>scp</b> did not ask you for your hills password, you probably forgot the colon (:) after the hills domain name.)</p>
+<li><p><b>ssh</b> to hills and confirm that <b>sample</b> was transferred. Then delete it. Remain on hills.</p>
+<li><p>Transfer the <b>stest</b> directory and all of its contents from linux to your home (current) directory on hills using <b>scp</b>. Remember to use the IP address of your linux system to do the transfer. (It actually does not matter which linux system's IP address you use, so long as you are using your personal linux account.)</p>
+<li><p>Still on hills, check that the <b>stest</b> directory and its contents were transferred.  Then delete <b>stest</b> and its contents.</p>
+<li><p>Still on hills, transfer the directory <b>/pub/cs/grwoo/cs160a/wildcards</b> recursively to your home directory on linux.</p>
+<li><p>Exit hills back to linux. Check that the <b>wildcards</b> directory was transferred. Then delete it and the <b>stest</b> directory recursively.</p>
+      </ol>
+
+      <h2>Submitting Your Homework Assignment</h2>
+      <p>Transfer your output script session as an attachment on Canvas</p>
+      <p>If you find something particularly interesting, please include that in your homework submission as a comment. I may ask you to share your insights at the beginning of class for participation points.</p>
+    </div>
+
+  </body>
+
+</html>

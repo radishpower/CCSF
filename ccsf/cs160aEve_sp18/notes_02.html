@@ -1,0 +1,58 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h1>CS 160A - SCP/SFTP</h1>
+
+      <h3>For more info, refer to <a href="https://fog.ccsf.edu/~gboyd/cs260a/online/review/transferring_files.html">Greg's notes on scp/sftp</a></h3>
+
+      <p>Chapters 4 - 7 of Shotts text will be covered next</p>
+
+      <p><b>sftp</b> is useful for transferring individual files between systems. It can also be useful if you need to retrieve a file from a remote system and you don't know what the file is.</p>	
+
+      <p><b>scp</b> is useful to transfer one unite of information nad you know exactly where the information is. Alos, there is the option to transfer entire directories.</p>
+
+      <h5>sftp</h5>
+
+      <p>Never use ftp. Any protocol that requires username and password should be encrypted.</p>
+
+      <ul>
+<li><p>Selection of ASCII or binary mode is automatic when using <b>sftp</b></p>
+	<ul>
+	<li><p>Ascii mode transfers files as 'text'.   Examples of ascii files would be .txt, .asp, .html, and .php files...</p>
+        <li><p>Examples of binary files would be .wav, .jpg, .gif, and mp3 files...</p>
+	</ul>
+<li><p>most remote commands have a local counterpart, which is invoked by prefixing <b>l</b> to the remote command (e.g. pwd / lpwd, ls / lls, cd / lcd )
+      </ul>
+
+      <p>A connection is initiated using:</p>
+
+      <pre>sftp [user@]remotesystem</pre>
+      
+      <h5>scp</h5>
+
+      <p>It is very common to need to copy a single piece of information between systems. This may be a file or a directory. In this case, scp is much easier than sftp. Note that with scp you connect, transfer and disconnect in a single command.</p>
+
+      <p>To copy to a remote system: </p>
+<pre>
+scp [ -r ]  localpath  [user@]remotedomain:[remotepath]
+</pre>
+
+      <p>To copy from a remote system:</p>
+<pre>
+scp [ -r ]   [user@]remotedomain:remotepath  localpath
+</pre>
+
+      <h3>For more info, refer to <a href="https://fog.ccsf.edu/~gboyd/cs260a/online/review/transferring_files.html">Greg's notes on scp/sftp</a></h3>
+    
+    </div>
+
+  </body>
+
+</html>

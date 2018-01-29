@@ -1,0 +1,102 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h2><a href="http://ccsf.avocadocheesecake.com/cs160aAft_sp18/index.html">Main Course Webpage</a></h2>
+      <h2><a href="https://cs160spring2018.slack.com/">Course Slack Page</a></h2>
+      <h1>In-Class Lab 3: Wildcards</h1>
+      <h2>Objective: Getting Familiar with Basic Commands and Wildcards</h2>
+
+      <p>These exercises get more challenging. Don't hesitate to refer to the Answers (at the end here) if you get stuck. You should be logged into one of the Linux workstations to do these parts.</p>
+
+      <h3>Part One: Basic Commands</h3>
+
+      <ol>
+
+<li><p>
+Connect to the <b>Lab3</b> directory beneath our public work area (/pub/cs). List the current directory recursively,
+showing hidden files and including the mark to distinguish directories. Refer to the listing to do the
+remaining items. (If you are logged in twice, keep the recursive listing in one window and continue
+the exercise in the other window) Use relative paths in all answers. Change directory only when instructed.
+</p>
+<li><p>display the contents of the file named <b>process</b></p>
+<li><p>list the directory named <b>Downloads</b>. One of the files has spaces in its name. Can you see it?</p>
+<li><p>list the file with spaces in its name (only) adding the option <b>-l</b> (that's lower-case L). Can you tell
+what information you are seeing? Can you tell how large the file is?
+</p>
+<li><p>Note that two of the files in the <b>Downloads</b> directory are PDF files. If you are on the console of
+your linux system, you can start a PDF reader to read one. Start the PDF reader named <b>evince</b>,
+giving it the path to <b>file.pdf</b> When you are done, quit the PDF reader to get back to the terminal
+(or just expose the terminal window and type control-C)
+</p>
+<li><p>change directory to the <b>Downloads</b> directory. Can you display the contents of the file <b>process</b> from
+where you are? can you list the contents of the hidden directory recursively?
+</p>
+<li><p>change directory to the directory named <b>homework</b>. Display the contents of the file <b>process</b> again.
+If you are on a local linux system, start the PDF reader <b>evince</b> on <b>file.pdf</b> again.</p>
+<li><p>there is a file in the <b>Downloads</b> directory that does not have a valid extension. Find out what type of
+file it is by using the command <b>file</b>. Do you know what the output means and what type of data the
+file is?
+</p>
+      </ol>
+
+      <h3>Part Two: Wildcards</h3>
+
+<p>Connect to the <b>wildcards</b> directory beneath the public work area on hills. Then write complete commands using <b>ls</b> and wildcards to list the objects <b>in the current directory only</b> as follows:</p>
+
+      <ol>
+<li><p>the second character in the name is a vowel (a or e or i or o or u). Other characters can be anything.</p>
+<li><p>the name begins with a space</p>
+<li><p>the name is exactly three letters (upper- or lower- case)</p>
+<li><p>the name ends with a character that is not a number</p>
+<li><p>the name contains a punctuation character</p>
+<li><p>the name contains a space character (blank only)</p>
+<li><p>the name begins with a space character (either blank or tab)</p>
+<li><p>the name begins or ends with an upper-case character.</p>
+      </ol>
+
+      <h2>Submitting Your Homework Assignment</h2>
+      <p>Transfer your output script session as an attachment on Canvas</p>
+      <p>If you find something particularly interesting, please include that in your homework submission as a comment. I may ask you to share your insights at the beginning of class for participation points.</p>
+
+
+      <h3>Answers and Hints:</h3>
+      <h3>Part One:</h3>
+
+      <ol>
+        <li><p><b>ls -RFA</b> is the best choice for the listing</p>
+        <li><p><b>cat backup/homework/asmt01/process</b></p>
+        <li><p><b>ls -F backup/Downloads.</b> The file <b>Use and Care Guide - 12828119.pdf</b> is the one with spaces in the name</p>
+        <li><p>referring to a file with spaces in its name is problematic. There are several solutions. The straightforward one is to quote the filename like this: <b>ls -F backup/Downloads/'Use and Care Guide - 12828119.pdf'</b> another possibility is to use filename completion. Type <b>ls -F backup/Downloads/UseTAB</b> where TAB is the tab character. If the filename is unique (which it is), the shell will fill in with the filename. (We will cover tab completion next week.) the last possibility is to use a wildcard like this <b>ls -F backup/Downloads/Use*</b></p>
+        <li><p><b>evince backup/Downloads/file.pdf</b></p>
+        <li><p><b>cd backup/Downloads</b><p><b>cat ../homework/asmt01/process</b></p><p><b>ls -F ../../.config</b></p>
+        <li><p><b>cd ../homework</b></p><p><b>evince ../Downloads/file.pdf</b></p>
+        <li><p><b>file ../Downloads/lab1a.noext</b></p><p>The file is a tar archive. Somewhat analagous to a zip file, it is a file that contains copies of other files. Notice that the extension is not required on a linux system.</p>
+      </ol>
+      
+      <h3>Part Two:</h3>
+
+      <p><b>cd /pub/cs/grwoo/cs160a/wildcards</b></p>
+      <ol>
+        <li><p><b>ls -dF ?[aeiou]*</b></p>
+        <li><p><b>ls -dF \ *</b></p>
+        <li><p><b>ls -dF [[:alpha:]][[:alpha:]][[:alpha:]]</b></p>
+        <li><p><b>ls -dF *[![:digit:]]</b></p>
+        <li><p><b>ls -dF *[[:punct:]]*</b></p>
+        <li><p><b>ls -df *' '*</b></p>
+        <li><p><b>ls -dF [[:space:]]*</b></p>
+        <li><p>This takes two wildcards - one for 'ends with' and one for 'begins with'. Note that the use of the international 'upper case' class gives some non-ASCII characters.</p>
+        <p><b>ls -dF [[:upper:]]* *[[:upper:]]</b></p>
+      </ol>
+
+    </div>
+
+  </body>
+
+</html>

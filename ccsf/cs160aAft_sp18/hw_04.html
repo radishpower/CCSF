@@ -1,0 +1,121 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h2><a href="http://ccsf.avocadocheesecake.com/cs160aAft_sp18/index.html">Main Course Webpage</a></h2>
+      <h2><a href="https://cs160a.slack.com/">Course Slack Page</a></h2>
+      <h1>In-Class Lab 4: Find and Locate</h1>
+      <h2>Objective: Practice simple forms of the find and locate commands</h2>
+
+      <p><b>find</b> is used to output paths beneath a set of directories that match as a set of options, called predicates. For example, the following command:</p>
+      <p><pre>
+find dir1 dir2 -name "foo" -type d
+      </pre></p>
+      <p>This command has two directories to look under: <b>dir1</b> and <b>dir2</b>, and two predicates. The first indicates that the name of the object must be <b>foo</b>. The second indicates that the object must be a directory. Thus <b>find</b> will only output the paths to directories named <b>foo</b> that are beneath <b>dir1</b> or <b>dir2</b>. <b>find</b> has many predicates. In this class, we will only highlight the two simplest and most useful options: <b>-name</b> and <b>-type</b>:</p>
+      <p>
+      <table>
+        <tr>
+          <td><b>command</b></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><b>-name "pattern"</b></td>
+          <td>here <em>pattern</em> is a wildcard pattern. Make sure to use quotes around your search query.</td>
+        </tr>
+        <tr>
+          <td><b>-type x</b></td>
+          <td>here <em>x</em> is a file type. File types include: regular files (f), directories (d) and symbolic links (l)</td>
+        </tr>
+      </table>
+      </p>
+
+      <p>For example, if the output of the command:</p>
+      <p>
+      <pre>
+find . -name "A*"
+      </pre>
+is</p>
+      <pre>
+./Amy
+./work/Apple
+./hw/Answers
+      </pre>
+      <p>this means that there are three objects beneath the current directory whose name starts with <b>A</b>. Note, however, that you do not know whether these objects are regular files or directories. (Note: if you had not quoted the wildcard pattern in the <b>find</b> command above, only the first object would have been found. Can you explain why?)</p>
+      <p>The general form of a <b>find</b> command is</p>
+      <p><b>find list-of-directories [ list-of-predicates ]</b></p>
+
+      <h2>Exercise</h2>
+      <h3>Part One: Using find</h3>
+
+      <p>On hills, grab the directory findExercise on hills using</p>
+      <pre>
+cp -r /pub/cs/grwoo/cs160a .
+      </pre>
+<!--wget "http://ccsf.avocadocheesecake.com/cs160a_f17/findExercise.zip"; unzip findExercise.zip;-->
+      <p>Then write <b>find</b> commands to do the following:</p>
+
+      <h3>Procedure</h3>
+
+      <ol>
+        <li>Output the paths to regular files beneath <b>usr</b>
+        <li>Output the paths to directories beneath <b>practice</b>
+        <li>Output the paths to regular files beneath <b>practice</b> whose names are <b>tree</b>
+        <li>Output the paths to directories beneath <b>usr</b> whose names are five characters long
+        <li>Output the paths to objects beneath <b>usr</b> whose names have a <b>.</b> in them
+        <li>Output the paths to everything beneath the current directory. Put the output in a file named <b>find.out</b> in your home directory. Then examine the contents of the <b>find.out</b> using <b>more.</b>
+        <li>Last, output the paths to all objects beneath <b>practice</b>. Can you use this output to create a directory tree of <b>practice</b> on the classroom Linux machines? How can you know what is a file and what is a directory?
+      </ol>
+
+      <h2>Exercise</h2>
+      <h3>Part Two: Using locate</h3>
+
+      <p>The <b>locate</b> command is useful for finding data that has been on the filesystem for at least a day. It does not allow you to list objects by attributes - it only searches a list of all data objects on the filesystem produced periodically (usually overnight). Thus you can only search for patterns in file <em>paths</em>, not by what type of data it is.</p>
+      <p>Since <b>locate</b> does not examine current files, rather it examines a list of files produced previously, it is much faster than <b>find</b>. The pattern you use to search for the filenames can be used to restrict the output.</p>
+      <p><b>locate [options] pattern</b></p>
+      <p>The default (no options) is to interpret the pattern as a wildcard pattern. If the pattern does not contain wildcard characters, leading and trailing asterisks are added - thus <b>locate pattern</b> is really <b>locate '*pattern*'</b></p>
+      <p>You can alter the type of pattern used by one of the <b>--regex</b> (regular expression) or <b>--regexp</b> (extended regular expression) options.</p>
+
+      <h3>Procedure</h3>
+
+      <ol>
+        <li>Output all file paths that contain the string <b>bad.txt</b>
+        <li>Output all file paths where the filename part (the last path segment) is <b>bad.txt</b>
+        <li>Create a new file named <b>bad.txt</b> in your current directory and re-issue the command for 2. Does your new file show up?
+        <li>Limit the search for files ending with ".conf" to paths beneath the system directory <b>/etc</b>
+      </ol>
+
+      <h2>Answers</h2>
+      <h3>Part One</h3>
+      <ol>
+        <li><p><b>find usr -type f</b></p>
+        <li><b>find practice -type d</b></li>
+        <li><b>find practice -type f -name "tree"</b></li>
+        <li><b>find usr -type d -name "?????"</b></li>
+        <li><b>find usr -name "*.*"</b></li>
+        <li><b>find . > ~/find.out</b>; <b>more ~/find.out</b></li>
+        <li><p><b>find practice</b></p><p>You can nearly draw the directory tree from this output. If a directory isn't empty, you can tell it is a directory since it has something in it. You cannot, however, distinguish a regular file from an empty directory.</p>
+      </ol>
+
+      <h3>Part Two</h3>
+      <ol>
+        <li><b>locate bad.txt</b></li>
+        <li><b>locate "*/bad.txt"</b></li>
+        <li>no notes</li>
+        <li><b>locate "/etc/*/*.conf"</b></li>
+      </ol>
+
+      <h2>Submitting Your Homework Assignment</h2>
+      <p>Transfer your output script session as an attachment on Canvas</p>
+      <p>If you find something particularly interesting, please include that in your homework submission as a comment. I may ask you to share your insights at the beginning of class for participation points.</p> 
+
+    </div>
+
+  </body>
+
+</html>

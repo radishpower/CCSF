@@ -1,0 +1,38 @@
+Script started on Wed 17 Jan 2018 02:33:41 PM PST
+[aszeto14@hills ~]$ cd Lab1/dir1/     
+[aszeto14@hills Lab1]$ ls -l
+total 24
+drwx------ 2 aszeto14 students     6 Jan 17 14:06 dir1
+-rwx------ 1 aszeto14 students   238 Jan 17 14:09 README
+-rwx------ 1 aszeto14 students    52 Jan 17 14:09 wrong
+-rwx------ 1 aszeto14 students 15211 Jan 17 14:09 xyz
+[aszeto14@hills Lab1]$ cat README 
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[aszeto14@hills Lab1]$ m cp README Rea  EADME1
+[aszeto14@hills Lab1]$ mvwr   wrong right
+[aszeto14@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[aszeto14@hills Lab1]$ ls -l
+total 28
+drwx------ 2 aszeto14 students     6 Jan 17 14:06 dir1
+-rwx------ 1 aszeto14 students   238 Jan 17 14:09 README
+-rwx------ 1 aszeto14 students   238 Jan 17 14:34 README1
+-rwx------ 1 aszeto14 students    52 Jan 17 14:09 right
+-rwx------ 1 aszeto14 students 15211 Jan 17 14:09 xyz
+[aszeto14@hills Lab1]$ ls -a
+.  ..  dir1  README  README1  right  xyz
+[aszeto14@hills Lab1]$ rm -rf 
+dir1/    README   README1  right    xyz      
+[aszeto14@hills Lab1]$ rm -rf dir1/
+[aszeto14@hills Lab1]$ rm xyz
+[aszeto14@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:35:14 PM PST

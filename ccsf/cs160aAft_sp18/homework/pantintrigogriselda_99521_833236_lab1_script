@@ -1,0 +1,130 @@
+Script started on Mon 22 Jan 2018 02:14:36 PM PST
+]0;gpantint@hills:~/Lab1[?1034h[gpantint@hills Lab1]$ date
+Mon Jan 22 14:14:49 PST 2018
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ pwd
+/students/gpantint/Lab1
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ whoami
+gpantint
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step 1
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ cd ~/Lab1
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ls -;[Kl
+total 28
+drwx------ 2 gpantint students     6 Jan 22 13:42 [0m[01;34mdir1[0m
+-rw------- 1 gpantint students     0 Jan 22 14:14 lab1_script
+-rwx------ 1 gpantint students   238 Jan 22 13:42 [01;32mREADME[0m
+-rw------- 1 gpantint students  1115 Jan 22 14:14 typescript
+-rwx------ 1 gpantint students    52 Jan 22 13:42 [01;32mwrong[0m
+-rwx------ 1 gpantint students 15211 Jan 22 13:42 [01;32mxyz[0m
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ cat README[K[K[K[K[K[K[K[K[K[K
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step 2
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step 3
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ mv README REAM[KDME1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KCP[K[Kcp RED[KADME README1
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step 4
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ mv wrong right
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ls
+[0m[01;34mdir1[0m  lab1_script  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  typescript  [01;32mxyz[0m
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step 5
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step 6
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ls -l
+total 32
+drwx------ 2 gpantint students     6 Jan 22 13:42 [0m[01;34mdir1[0m
+-rw------- 1 gpantint students     0 Jan 22 14:14 lab1_script
+-rwx------ 1 gpantint students   238 Jan 22 13:42 [01;32mREADME[0m
+-rwx------ 1 gpantint students   238 Jan 22 14:17 [01;32mREADME1[0m
+-rwx------ 1 gpantint students    52 Jan 22 13:42 [01;32mright[0m
+-rw------- 1 gpantint students  1115 Jan 22 14:14 typescript
+-rwx------ 1 gpantint students 15211 Jan 22 13:42 [01;32mxyz[0m
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step 7
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ls -l
+total 32
+drwx------ 2 gpantint students     6 Jan 22 13:42 [0m[01;34mdir1[0m
+-rw------- 1 gpantint students     0 Jan 22 14:14 lab1_script
+-rwx------ 1 gpantint students   238 Jan 22 13:42 [01;32mREADME[0m
+-rwx------ 1 gpantint students   238 Jan 22 14:17 [01;32mREADME1[0m
+-rwx------ 1 gpantint students    52 Jan 22 13:42 [01;32mright[0m
+-rw------- 1 gpantint students  1115 Jan 22 14:14 typescript
+-rwx------ 1 gpantint students 15211 Jan 22 13:42 [01;32mxyz[0m
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34mdir1[0m  lab1_script  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  typescript  [01;32mxyz[0m
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ man ls -a
+[?1049h[?1h=LS(1)                            User Commands                           LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about  the FILEs (the current directory by default).[m
+       Sort entries alphabetically if none of [1m-cftuvSUX[0m nor [1m--sort[0m  is  speci‐[m
+       fied.[m
+[m
+       Mandatory  arguments  to  long  options are mandatory for short options[m
+       too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049lNo manual entry for -a
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ man ls -l
+[?1049h[?1h=LS(1)                            User Commands                           LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about  the FILEs (the current directory by default).[m
+       Sort entries alphabetically if none of [1m-cftuvSUX[0m nor [1m--sort[0m  is  speci‐[m
+       fied.[m
+[m
+       Mandatory  arguments  to  long  options are mandatory for short options[m
+       too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049lNo manual entry for -l
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ##[K ls -l shows permissions, and ls -a doesn't ignore entri es starting with '.'
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ #S[K Step 8
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ rmdir dir1
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ls
+lab1_script  [0m[01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  typescript  [01;32mxyz[0m
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ 
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ # Step #9
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ rm xyz
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ ls
+lab1_script  [0m[01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  typescript
+]0;gpantint@hills:~/Lab1[gpantint@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 02:26:00 PM PST

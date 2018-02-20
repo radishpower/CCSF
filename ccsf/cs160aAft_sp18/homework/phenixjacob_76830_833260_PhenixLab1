@@ -1,0 +1,79 @@
+Script started on Mon 22 Jan 2018 02:17:36 PM PST
+]0;jphenix@hills:~/Lab1[?1034h[jphenix@hills Lab1]$ T[K# This is my firt[Kst script
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ cd p[KLab1
+bash: cd: Lab1: No such file or directory
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls-l
+bash: ls-l: command not found
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls -l
+total 24
+drwx------ 2 jphenix students     6 Jan 22 14:09 [0m[38;5;27mdir1[0m
+-rw------- 1 jphenix students     0 Jan 22 14:17 PhenixLab1
+-rwx------ 1 jphenix students   238 Jan 22 14:09 [38;5;34mREADME[0m
+-rwx------ 1 jphenix students    52 Jan 22 14:09 [38;5;34mwrong[0m
+-rwx------ 1 jphenix students 15211 Jan 22 14:09 [38;5;34mxyz[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ CAT[K[K[Kcat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ cp REAADME[K[K[K[KDME README1
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls [K
+[0m[38;5;27mdir1[0m  PhenixLab1  [38;5;34mREADME[0m  [38;5;34mREADME1[0m  [38;5;34mwrong[0m  [38;5;34mxyz[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ mv wrong right
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls
+[0m[38;5;27mdir1[0m  PhenixLab1  [38;5;34mREADME[0m  [38;5;34mREADME1[0m  [38;5;34mright[0m  [38;5;34mxyz[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls -l
+total 28
+drwx------ 2 jphenix students     6 Jan 22 14:09 [0m[38;5;27mdir1[0m
+-rw------- 1 jphenix students     0 Jan 22 14:17 PhenixLab1
+-rwx------ 1 jphenix students   238 Jan 22 14:09 [38;5;34mREADME[0m
+-rwx------ 1 jphenix students   238 Jan 22 14:23 [38;5;34mREADME1[0m
+-rwx------ 1 jphenix students    52 Jan 22 14:09 [38;5;34mright[0m
+-rwx------ 1 jphenix students 15211 Jan 22 14:09 [38;5;34mxyz[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ la[Ks -la
+total 28
+drwx------ 3 jphenix students    89 Jan 22 14:26 [0m[38;5;27m.[0m
+drwx------ 5 jphenix students   152 Jan 22 14:09 [38;5;27m..[0m
+drwx------ 2 jphenix students     6 Jan 22 14:09 [38;5;27mdir1[0m
+-rw------- 1 jphenix students     0 Jan 22 14:17 PhenixLab1
+-rwx------ 1 jphenix students   238 Jan 22 14:09 [38;5;34mREADME[0m
+-rwx------ 1 jphenix students   238 Jan 22 14:23 [38;5;34mREADME1[0m
+-rwx------ 1 jphenix students    52 Jan 22 14:09 [38;5;34mright[0m
+-rwx------ 1 jphenix students 15211 Jan 22 14:09 [38;5;34mxyz[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ # la -a[K[K[K[Ks -a lists hiddend[K ot[K[Kdot files
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ rmdir d dir1[K[K[K[K[K[Kdir1[K[K[K[K[K 1[Kdir![K1
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls -l
+total 28
+-rw------- 1 jphenix students     0 Jan 22 14:17 PhenixLab1
+-rwx------ 1 jphenix students   238 Jan 22 14:09 [0m[38;5;34mREADME[0m
+-rwx------ 1 jphenix students   238 Jan 22 14:23 [38;5;34mREADME1[0m
+-rwx------ 1 jphenix students    52 Jan 22 14:09 [38;5;34mright[0m
+-rwx------ 1 jphenix students 15211 Jan 22 14:09 [38;5;34mxyz[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls -la
+total 28
+drwx------ 2 jphenix students    77 Jan 22 14:38 [0m[38;5;27m.[0m
+drwx------ 5 jphenix students   152 Jan 22 14:09 [38;5;27m..[0m
+-rw------- 1 jphenix students     0 Jan 22 14:17 PhenixLab1
+-rwx------ 1 jphenix students   238 Jan 22 14:09 [38;5;34mREADME[0m
+-rwx------ 1 jphenix students   238 Jan 22 14:23 [38;5;34mREADME1[0m
+-rwx------ 1 jphenix students    52 Jan 22 14:09 [38;5;34mright[0m
+-rwx------ 1 jphenix students 15211 Jan 22 14:09 [38;5;34mxyz[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ rm xyz
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ ls -la
+total 12
+drwx------ 2 jphenix students  66 Jan 22 14:40 [0m[38;5;27m.[0m
+drwx------ 5 jphenix students 152 Jan 22 14:09 [38;5;27m..[0m
+-rw------- 1 jphenix students   0 Jan 22 14:17 PhenixLab1
+-rwx------ 1 jphenix students 238 Jan 22 14:09 [38;5;34mREADME[0m
+-rwx------ 1 jphenix students 238 Jan 22 14:23 [38;5;34mREADME1[0m
+-rwx------ 1 jphenix students  52 Jan 22 14:09 [38;5;34mright[0m
+]0;jphenix@hills:~/Lab1[jphenix@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 02:40:42 PM PST

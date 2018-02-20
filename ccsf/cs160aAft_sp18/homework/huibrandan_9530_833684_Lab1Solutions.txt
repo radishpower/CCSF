@@ -1,0 +1,43 @@
+Script started on Mon 22 Jan 2018 02:16:07 PM PST
+[bhui6@hills ~]$ cd Lab1
+[bhui6@hills Lab1]$ ls -l
+total 24
+drwx------ 2 bhui6 students     6 Jan 22 13:49 dir1
+-rwx------ 1 bhui6 students   238 Jan 22 14:02 README
+-rwx------ 1 bhui6 students    52 Jan 22 14:02 wrong
+-rwx------ 1 bhui6 students 15211 Jan 22 14:02 xyz
+[bhui6@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[bhui6@hills Lab1]$ cp README REAME1DME1[bhui6@hills Lab1]$ cp README READM[bhui6@hills Lab1]$ cp README README[bhui6@hills Lab1]$ cp README README1
+[bhui6@hills Lab1]$ mv wrong right
+[bhui6@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[bhui6@hills Lab1]$ ls -l
+total 28
+drwx------ 2 bhui6 students     6 Jan 22 13:49 dir1
+-rwx------ 1 bhui6 students   238 Jan 22 14:02 README
+-rwx------ 1 bhui6 students   238 Jan 22 14:17 README1
+-rwx------ 1 bhui6 students    52 Jan 22 14:02 right
+-rwx------ 1 bhui6 students 15211 Jan 22 14:02 xyz
+[bhui6@hills Lab1]$ ls -l
+total 28
+drwx------ 2 bhui6 students     6 Jan 22 13:49 dir1
+-rwx------ 1 bhui6 students   238 Jan 22 14:02 README
+-rwx------ 1 bhui6 students   238 Jan 22 14:17 README1
+-rwx------ 1 bhui6 students    52 Jan 22 14:02 right
+-rwx------ 1 bhui6 students 15211 Jan 22 14:02 xyz
+[bhui6@hills Lab1]$ ls -a
+.  ..  dir1  README  README1  right  xyz
+[bhui6@hills Lab1]$ rm -rf dir1
+[bhui6@hills Lab1]$ rmxyz xyz[bhui6@hills Lab1]$ rm x[bhui6@hills Lab1]$ rm xy[bhui6@hills Lab1]$ rm xyz
+[bhui6@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 02:21:00 PM PST

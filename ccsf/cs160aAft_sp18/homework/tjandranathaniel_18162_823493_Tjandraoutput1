@@ -1,0 +1,57 @@
+Script started on Wed 17 Jan 2018 02:20:33 PM PST
+[ntjandr2@hills Lab1]$ date
+Wed Jan 17 14:20:40 PST 2018
+[ntjandr2@hills Lab1]$ cal
+    January 2018    
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+[ntjandr2@hills Lab1]$ pwd
+/students/ntjandr2/Lab1
+[ntjandr2@hills Lab1]$ whoami
+ntjandr2
+[ntjandr2@hills Lab1]$ # This is a commentpw   pwd is my directory and whoami u displays the username
+[ntjandr2@hills Lab1]$ cat README 
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[ntjandr2@hills Lab1]$ cp README README1
+[ntjandr2@hills Lab1]$ mv    # Now we will rename wrong to right
+[ntjandr2@hills Lab1]$ mv wrong right
+[ntjandr2@hills Lab1]$ file    #Now    Now we will find out the type    file typr   e of xyz
+[ntjandr2@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[ntjandr2@hills Lab1]$ -l
+bash: -l: command not found
+[ntjandr2@hills Lab1]$ ls -l
+total 28
+drwx------ 2 ntjandr2 students     6 Jan 17 14:05 dir1
+-rwx------ 1 ntjandr2 students   238 Jan 17 14:18 README
+-rwx------ 1 ntjandr2 students   238 Jan 17 14:22 README1
+-rwx------ 1 ntjandr2 students    52 Jan 17 14:18 right
+-rw------- 1 ntjandr2 students     0 Jan 17 14:20 typescript
+-rwx------ 1 ntjandr2 students 15211 Jan 17 14:18 xyz
+[ntjandr2@hills Lab1]$ ls -a
+.  ..  dir1  README  README1  right  typescript  xyz
+[ntjandr2@hills Lab1]$ #-l shows the file permisions and details on access, while -a shou ws a simplified name now   own  nly.
+[ntjandr2@hills Lab1]$ rm dir1-dir1rdir1 dir1[ntjandr2@hills Lab1]$ rm -r d[ntjandr2@hills Lab1]$ rm -r di[ntjandr2@hills Lab1]$ rm -r dir[ntjandr2@hills Lab1]$ rm -r dir1          #Now we will remove the directory (-r) and file xyz.
+[ntjandr2@hills Lab1]$ rm -r dir1/ 
+[ntjandr2@hills Lab1]$ rm xyz
+[ntjandr2@hills Lab1]$ ls
+README	README1  right	typescript
+[ntjandr2@hills Lab1]$ mv typescript Tjandraoutput1
+[ntjandr2@hills Lab1]$ ls
+README	README1  right	Tjandraoutput1
+[ntjandr2@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:32:42 PM PST

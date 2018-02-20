@@ -1,0 +1,129 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h1>CS 160A - Absolute Paths, Relative Paths, Symbolic Links</h1>
+      <h2>Find, Locate (Chapters 4, 5, 17 Shotts)</h2>
+
+      <h3>Absolute Pathnames</h3>
+
+      <p>"An absolute pathname begins with the root directory and follows the
+tree branch by branch until the path to the desired directory or file is
+completed. For example, there is a directory on your system in which most of
+our system's programs are installed. The pathname of the directory is
+<b>/usr/bin</b>.  This means from the root directory (represented by the
+leading slash in the pathname) there is a directory called <b>usr</b> which
+contains a directory called <b>bin</b>."</p>
+
+      <h3>Relative Pathnames</h3>
+
+      <p>"Where an absolute pathname starts from the root directory and leads
+to its destination, a relative pathname starts from the working directory. To
+do this, it uses a couple of special notations to represent relative positions
+in the file system tree. These special notations are "." (dot) and ".." (dot
+dot)."</p>
+
+      <ul>
+<li><p>"<b>..</b>" refers to the working directory's parent directory
+      </ul>
+
+      <h3>Important Facts About Filenames</h3>
+
+<ul>
+<li>Filenames that have a period in front of it are hidden
+<li>Filenames are case sensitive
+<li>Filename extensions don't really mean anything, applications might use them to mean something. Use the command <b>file</b> to help you figure out what a file does
+<li>Spaces can be really tricky filenames, try to avoid them. Use <b>less</b> to quickly view files
+</ul>
+
+      <h3>A File in the Linux System</h3>
+
+<p>We can imagine that files are made up of two parts:</p>
+<ul>
+<li>The data part containing the file's contents
+<li>The part that holds the file's filename
+</ul>
+
+<p>When we use <b>ls -l</b>, we are actualy looking at the "name part" of the file, linking to the "data part" of the file's contents.</p>
+
+<p>The system assigns a chain of disk blocks which we call <b>inode</b>s to be associated with each name part.</p>
+
+      <h3>Symbolic Links</h3>
+
+<p>The symbolic link is derived from the hard link. Hard links are the original way of creating links to files. By default, every file has a single hard link that gives the file its name.</p>
+
+<p>Hard links have two important limitations:</p>
+
+<ul>
+<li>A hard link cannot reference a file outside its own file system. This means a link cannot reference a file that is not on the same disk partition as the link itself.
+<li>A hard link may not reference a directory
+<li>A hard link is indistinguishable from the file itself. Unlike a symbolic link, when you list a directory containing a hard link, you see no special indication of the link. When a hard link is deleted, the link is removed but the contents of the file itself continue to exist. Space is not deallocated until all links to the file are deleted.
+</ul>
+
+<p>We don't use hard links too much in practice, but they are conceptually important.</p>
+
+<p>Symbolic links create a special type of file that contains a text pointer to the referenced file or directory (inspiration for the  Windows shortcut).</p>
+
+<p>"A file pointed to by a symbolic link, and the symbolic link itself are
+largely indistinguishable from one another. For example, if you write
+something to the symbolic link, the referenced file is written to. However
+when you delete a symbolic link, only the link is deleted, not the file itself.
+If the file is deleted before the symbolic link, the link will continue to
+exist, but will point to nothing. In this case, the link is said to be broken.
+In many implementations, the ls command will display broken links in a
+distinguishing color, such as red, to reveal their presence."</p>
+
+    </div>
+
+
+<h5>Creating a hard link:</h5>
+
+<p><pre>
+ln fileA fileB
+ln fileA dir/fileB
+</pre></p>
+
+<p>When we create a hard link, we are referring to additional name parts that refer to the data part</p>
+
+<p>Each hard link refers to a specific inode containing the file's contents. We can see that more clearly by running <b>ls -li</b> and checking the first column i.e. the inode number.</p>
+
+    <p>For more on this material refer to the course textbook: "The Linux Command Line" by Shotts</p>
+
+<h5>Creating a symbolic link:</h5>
+
+<p>Symbolic links can refer to directories and span across physical devices.</p>
+
+<p>Creating a symbolic links is similar to creating a hard link:</p>
+
+<pre>
+ln -s fileA fileB
+ln -s ../fileA dirA/fileB
+ln -s ../fileB dirA/fileB
+</pre>
+
+<p>Symbolic links can be created using absolute pathnames or relative pathnames</p>
+
+<ol>
+<li>Deleting a symbolic link does not delete the original link
+<li>Deleting the original file results in a broken link
+</ol>
+
+<h3>Some more commands to help you navigate file structures</h3>
+
+<ol>
+<li><b>type</b>: Indicate how a command name is interpreted
+<li><b>which</b>: Display which executable program will be executed
+<li><b>info</b>: Display a command's info entry
+<li><b>find</b>
+<li><b>locate</b>
+</ol>
+
+  </body>
+
+</html>

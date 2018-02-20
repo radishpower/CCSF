@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>Interest.java</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#444444">/* Craig Persiko - CS 111A - Interest.java
+   Sample program to demonstrate i/o, calculations and if-statement.
+
+   Interest Program
+   Allows user to enter the amount of an investment.
+   Investments under $50,000 earn 5% interest, and investments equal to
+   or above $50,000 earn 6% interest.  The dollar amount of interest
+   earned is output by the program.
+*/</font>
+
+<font color="0000ff"><strong>import java.util.Scanner;</strong></font>
+
+<strong>public</strong> <strong>class</strong> <font color="#2040a0">Interest</font>
+<font color="4444FF"><strong>{</strong></font>
+  <strong>public</strong> <strong>static</strong> <strong>void</strong> <font color="#2040a0">main</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">String</font><font color="4444FF"><strong>[</strong></font><font color="4444FF"><strong>]</strong></font> <font color="#2040a0">args</font><font color="4444FF"><strong>)</strong></font>
+  <font color="4444FF"><strong>{</strong></font>
+    <strong>double</strong> <font color="#2040a0">inv_amount</font>, <font color="#2040a0">int_earned</font><font color="4444FF">;</font>
+    <font color="#2040a0">Scanner</font> <font color="#2040a0">scan</font> <font color="4444FF">=</font> <strong>new</strong> <font color="#2040a0">Scanner</font> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">System</font>.<font color="#2040a0">in</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Welcome to Investment World<font color="#77dd77">\n</font>Enter amount to be invested&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">inv_amount</font> <font color="4444FF">=</font> <font color="#2040a0">scan</font>.<font color="#2040a0">nextDouble</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">inv_amount</font> <font color="4444FF">&lt;</font> <font color="#FF0000">50000.0</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#2040a0">inv_amount</font> <font color="4444FF">*</font> <font color="#FF0000">0.05</font><font color="4444FF">;</font> <font color="#444444">// 5% interest</font>
+    <strong>else</strong>
+      <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#2040a0">inv_amount</font> <font color="4444FF">*</font> <font color="#FF0000">0.06</font><font color="4444FF">;</font> <font color="#444444">// 6% interest</font>
+    <font color="#444444">// No curly braces are needed above because only one line is</font>
+    <font color="#444444">// executed in each case.</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Your investment earns $&quot;</font> <font color="4444FF">+</font> <font color="#2040a0">int_earned</font>
+                       <font color="4444FF">+</font> <font color="#008000">&quot; interest in one year.&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+  <font color="4444FF"><strong>}</strong></font>
+<font color="4444FF"><strong>}</strong></font>
+
+<font color="#444444">/*  SAMPLE OUTPUT:
+
+Welcome to Investment World
+Enter amount to be invested
+100
+Your investment earns $5.0 interest in one year.
+
+    -- Trying a different value --
+
+Welcome to Investment World
+Enter amount to be invested:
+100000
+Your investment earns $6000.0 interest in one year.
+
+*/</font>
+
+</pre>
+<hr>
+syntax highlighted by <a href="http://www.palfrader.org/code2html">Code2HTML</a>, v. 0.9
+</body>
+</html>

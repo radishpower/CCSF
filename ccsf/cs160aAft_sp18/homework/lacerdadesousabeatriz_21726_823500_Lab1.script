@@ -1,0 +1,73 @@
+Script started on Wed 17 Jan 2018 02:39:57 PM PST
+[blacerda@hills ~]$ cp -r /
+.autorelabel  lib/          proc/         students/
+bin/          lib64/        pub/          sys/
+boot/         logs/         restore/      tmp/
+clubweb/      media/        root/         users/
+dev/          mnt/          run/          usr/
+etc/          ops/          sbin/         var/
+home/         opt/          srv/          
+[blacerda@hills ~]$ cp -r /pub/cs/grwoo/cs160a/Lab1 ~
+[blacerda@hills ~]$ 
+[blacerda@hills ~]$ #####LAB 1####
+[blacerda@hills ~]$ ####DATE####
+[blacerda@hills ~]$ date
+Wed Jan 17 14:42:20 PST 2018
+[blacerda@hills ~]$ ####pwd####
+[blacerda@hills ~]$ pwd
+/students/blacerda
+[blacerda@hills ~]$ ####whoami####
+[blacerda@hills ~]$ whom ami
+blacerda
+[blacerda@hills ~]$ ####step 1####
+[blacerda@hills ~]$ cd Lab1
+[blacerda@hills Lab1]$ ls -l
+total 24
+drwx------ 2 blacerda students     6 Jan 17 14:04 dir1
+-rwx------ 1 blacerda students   238 Jan 17 14:40 README
+-rwx------ 1 blacerda students    52 Jan 17 14:40 wrong
+-rwx------ 1 blacerda students 15211 Jan 17 14:40 xyz
+[blacerda@hills Lab1]$ ####sr tep 2####
+[blacerda@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[blacerda@hills Lab1]$ ####step 3####
+[blacerda@hills Lab1]$ cp README README1
+[blacerda@hills Lab1]$ ####step 4####
+[blacerda@hills Lab1]$ mv wrong right
+[blacerda@hills Lab1]$ ####step 5####
+[blacerda@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[blacerda@hills Lab1]$ ####step 6####
+[blacerda@hills Lab1]$ ls -l
+total 28
+drwx------ 2 blacerda students     6 Jan 17 14:04 dir1
+-rwx------ 1 blacerda students   238 Jan 17 14:40 README
+-rwx------ 1 blacerda students   238 Jan 17 14:44 README1
+-rwx------ 1 blacerda students    52 Jan 17 14:40 right
+-rwx------ 1 blacerda students 15211 Jan 17 14:40 xyz
+[blacerda@hills Lab1]$ ####step 7####
+[blacerda@hills Lab1]$ ls -l
+total 28
+drwx------ 2 blacerda students     6 Jan 17 14:04 dir1
+-rwx------ 1 blacerda students   238 Jan 17 14:40 README
+-rwx------ 1 blacerda students   238 Jan 17 14:44 README1
+-rwx------ 1 blacerda students    52 Jan 17 14:40 right
+-rwx------ 1 blacerda students 15211 Jan 17 14:40 xyz
+[blacerda@hills Lab1]$ ls -a
+.  ..  dir1  README  README1  right  xyz
+[blacerda@hills Lab1]$ #seems like ls -a shows more files than       , ls -l< #seems like ls -a shows more files, ls -l                     seems to show permis<ows more files, ls -l seems to show permiss                    ions
+[blacerda@hills Lab1]$ ####step 8####
+[blacerda@hills Lab1]$ rm -rf dir1
+[blacerda@hills Lab1]$ ####step 9####
+[blacerda@hills Lab1]$ rm xyz
+[blacerda@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:47:57 PM PST

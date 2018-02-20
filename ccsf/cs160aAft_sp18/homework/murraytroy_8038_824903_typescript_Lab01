@@ -1,0 +1,42 @@
+Script started on 2018年01月18日 08時44分29秒
+[tmurray7@hills ~]$ date
+2018年  1月 18日 木曜日 08:44:46 PST
+[tmurray7@hills ~]$ pwd
+/students/tmurray7
+[tmurray7@hills ~]$ whoami
+tmurray7
+[tmurray7@hills ~]$ cd Lab1
+[tmurray7@hills Lab1]$ ls -l
+total 24
+drwx------ 2 tmurray7 students     6  1月 18 08:42 dir1
+-rwx------ 1 tmurray7 students   238  1月 18 08:42 README
+-rwx------ 1 tmurray7 students    52  1月 18 08:42 wrong
+-rwx------ 1 tmurray7 students 15211  1月 18 08:42 xyz
+[tmurray7@hills Lab1]$ cat README 
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[tmurray7@hills Lab1]$ cp README README1
+[tmurray7@hills Lab1]$ mv wrong right
+[tmurray7@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[tmurray7@hills Lab1]$ ls -l
+total 28
+drwx------ 2 tmurray7 students     6  1月 18 08:42 dir1
+-rwx------ 1 tmurray7 students   238  1月 18 08:42 README
+-rwx------ 1 tmurray7 students   238  1月 18 08:46 README1
+-rwx------ 1 tmurray7 students    52  1月 18 08:42 right
+-rwx------ 1 tmurray7 students 15211  1月 18 08:42 xyz
+[tmurray7@hills Lab1]$ ls -a
+.  ..  dir1  README  README1  right  xyz
+[tmurray7@hills Lab1]$ rm -rf dir1/ 
+[tmurray7@hills Lab1]$ rm xyz
+[tmurray7@hills Lab1]$ exit
+exit
+
+Script done on 2018年01月18日 08時50分35秒

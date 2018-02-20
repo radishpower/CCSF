@@ -1,0 +1,49 @@
+Script started on Mon 22 Jan 2018 01:45:05 PM PST
+[cloeza1@hills Lab1]$ ##   ## Tjis     his is step 1
+[cloeza1@hills Lab1]$ cd Lab1
+bash: cd: Lab1: No such file or directory
+[cloeza1@hills Lab1]$ ls
+dir1  InClassLab1  Lab1Solution  README  README1  right  wrong	xyz
+[cloeza1@hills Lab1]$ cd    cd
+[cloeza1@hills ~]$ cd Lab1
+[cloeza1@hills Lab1]$ ### STep     tep 2 
+[cloeza1@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[cloeza1@hills Lab1]$ ### STEp     tep 3
+[cloeza1@hills Lab1]$ cp README README1
+[cloeza1@hills Lab1]$ mv wrong right              ### Step 4
+[cloeza1@hills Lab1]$ mv wrong right  
+[cloeza1@hills Lab1]$ ### Step 5
+[cloeza1@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[cloeza1@hills Lab1]$ ### se  Step 6
+[cloeza1@hills Lab1]$ ls -l
+total 28
+drwx------ 2 cloeza1 students     6 Jan 22 13:36 dir1
+-rw------- 1 cloeza1 students     0 Jan 22 09:17 InClassLab1
+-rw------- 1 cloeza1 students     0 Jan 22 13:45 Lab1Solution
+-rwx------ 1 cloeza1 students   238 Jan 22 13:43 README
+-rwx------ 1 cloeza1 students   238 Jan 22 13:48 README1
+-rwx------ 1 cloeza1 students    52 Jan 22 13:43 right
+-rwx------ 1 cloeza1 students 15211 Jan 22 13:43 xyz
+[cloeza1@hills Lab1]$ ### Se tep 7 
+[cloeza1@hills Lab1]$ ls -a
+.  ..  dir1  InClassLab1  Lab1Solution	README	README1  right	xyz
+[cloeza1@hills Lab1]$ ###     The     L - R Reason        REa  eason      Diffen rence:
+[cloeza1@hills Lab1]$ # -l  : this uses         is gives us more information regarding the dile    files and directo           
+[cloeza1@hills Lab1]$ # -a: onlu    ly gibes   ves us the name of the files
+[cloeza1@hills Lab1]$ #  ## Step 8
+[cloeza1@hills Lab1]$ rm -rf dir1
+[cloeza1@hills Lab1]$ rm xyz
+[cloeza1@hills Lab1]$ exitrm xyz-rf dir1### Step 8 [cloeza1@hills Lab1]$ ### Step 8 9 A above this ^
+[cloeza1@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 01:54:42 PM PST

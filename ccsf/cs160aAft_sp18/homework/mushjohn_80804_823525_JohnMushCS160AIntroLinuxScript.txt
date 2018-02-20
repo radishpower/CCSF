@@ -1,0 +1,42 @@
+﻿Script started on Wed 17 Jan 2018 02:17:10 PM PST
+]0;jmush@hills:~/Lab1[?1034h[jmush@hills Lab1]$ cd Lab1
+bash: cd: Lab1: No such file or directory
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ cp README README1
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ mv wrong right
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ ls
+[0m[01;34mdir1[0m  IntroLinux  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ ls -l
+total 28
+drwx------ 2 jmush students     6 Jan 17 14:10 [0m[01;34mdir1[0m
+-rw------- 1 jmush students     0 Jan 17 14:17 IntroLinux
+-rwx------ 1 jmush students   238 Jan 17 14:10 [01;32mREADME[0m
+-rwx------ 1 jmush students   238 Jan 17 14:17 [01;32mREADME1[0m
+-rwx------ 1 jmush students    52 Jan 17 14:10 [01;32mright[0m
+-rwx------ 1 jmush students 15211 Jan 17 14:10 [01;32mxyz[0m
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34mdir1[0m  IntroLinux  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ rm dir1
+rm: cannot remove ‘dir1’: Is a directory
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ remdir dir1
+bash: remdir: command not found
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ rmdir dir1
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ ls
+IntroLinux  [0m[01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ rm xyz
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ ls
+IntroLinux  [0m[01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m
+]0;jmush@hills:~/Lab1[jmush@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:19:59 PM PST

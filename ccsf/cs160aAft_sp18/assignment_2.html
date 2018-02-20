@@ -1,0 +1,68 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css"  href="../base.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <h1><a href="http://ccsf.avocadocheesecake.com/cs160aEve_sp18/index.html">Main Course Webpage</a></h1>
+
+      <h1>CS160A Assignment 2</h1>
+      <p>Objective: Create a webpage in your home directory accessible by the world wide web</p>
+
+      <p>The work required in this assignment is not difficult, but requires a fair amount of knowledge. Consult the world wide web for additional tools you might need. Have fun customizing your webpage.</p>     
+ 
+      <h5>Before starting your script session for Part One, use these tips! In the discussion below, <b>login</b> is your login id.</h5>
+
+      <ul>
+
+	<li><p>When a browser is pointed at your home directory on hills using the
+web address <b>http://hills.ccsf.edu/~login</b>, it looks for a directory named
+<b>public_html</b> immediately beneath your home directory. You can refer to
+subdirectories of <b>public_html</b> by appending the subdirectory to the URL.
+For example, <b>http://hills.ccsf.edu/~login/cs160a</b> looks for the directory
+<b>public_html/cs160a</b> beneath your home directory.</p>
+	<li><p>browsers are not known users, so the permissions of the group <b>other</b> apply when an object is accessed.</p>
+	<li><p>in order to access a file <b>foo</b>, you need read permission for the file <b>foo</b> and execute permission to each directory that must be accessed in order to get to <b>foo</b> (Thus, to access <b>/a/b/foo</b>, you need read permission to <b>foo</b> and execute permission to <b>/</b>, <b>/a</b>, and <b>/a/b</b>)</p>
+        <li><p>When you point a browser at a directory, this is a rundown of what happens:</p>
+<ul>
+	<li><p>if the browser cannot access the directory, it complains</p>
+        <li><p>otherwise, if there is a file named index.html or index.htm in the directory with the correct permissions, the browser displays it.</p>
+       	<li><p>otherwise, if the permissions are available, the browser lists the directory's contents (the <em>hills</em> browser currently does not allow this)</p>
+</ul>
+      </ul>
+
+      <h2>Get the Base Files</h2>
+
+<p>The directory asmt02 in our public directory (/pub/cs/grwoo/cs160a) on hills has the components for our website. You won't be using a script session for this part of the assignment. It may be tempting to modify the provided files to make them prettier. You are encouraged to do that. However, this is an exercise in using Linux. You will be graded on: organizing directories, links and setting the correct permissions. HTML work is not a part of this assignment, and if you modify the page itself, keep the same directory structure. Use [hard or symbolic] links to refer to your image files, as discussed below.</p>
+
+<p>The importance parts of setting up your <b>public_html</b> folder to be accessible by the web is to pay attention to:</p>
+
+<ul>
+
+  <li>Permission settings from the web to allow the browser to read your pages
+  <li>Preventing other students on hills to access the contents of your folder
+  <li>Although non-students on hills (through the browser) will read your pages, they should never be able to write to your <b>public_html</b> directory.
+</ul>
+
+
+  <p>Some ways you can customize your page's contents include:</p>
+
+<ul>
+  <li>Modifying some text files with some information about what you think about Unix
+  <li>Selecting your own pictures and including them
+  <li>Create fresh content about your most recent Raspbery Pi project with basic HTML markup
+</ul>
+
+<p>You can go to <b><a href="http://hills.ccsf.edu/~grwoo/cs160a">http://hills.ccsf.edu/~grwoo/cs160a</a></b> to see what your webpage might end up looking like.</p>
+
+<p>How you create your directory structure is up to you. Below is a suggested method for those of you who need some guidelines. You do not have to do the following in a script session. <b>Your script session will simply contain a directory and file listing of your result</b></p>
+
+    </div>
+
+  </body>
+
+</html>

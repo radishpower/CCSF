@@ -1,0 +1,103 @@
+Script started on Fri Jan 26 13:12:35 2018
+[?1034hbash-3.2$ ~/Desk[K[K[K[K[K[Kmkdir stest
+bash-3.2$ cd stest
+bash-3.2$ nana[Ko sample.txt 
+[?1049h[1;38r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.0.6                    File: sample.txt                                                [36;45H[ New File ][37d^G(B[m Get Help     (B[0;7m^O(B[m WriteOut     (B[0;7m^R(B[m Read File    (B[0;7m^Y(B[m Prev Page    (B[0;7m^K(B[m Cut Text     (B[0;7m^C(B[m Cur Pos[38d(B[0;7m^X(B[m Exit[38;17H(B[0;7m^J(B[m Justify[33G(B[0;7m^W(B[m Where Is     (B[0;7m^V(B[m Next Page    (B[0;7m^U(B[m UnCut Text   (B[0;7m^T(B[m To Spell[3d[1;91H(B[0;7mModified[3d(B[mKerrie Lu [4dMy sample for [36d[K[4;15HLab1 2.[36d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                        [37;1H Y(B[m Yes[K[38d(B[0;7m N(B[m No  [38;18H(B[0;7mC(B[m Cancel[K[36;62H(B[0;7mFile Name to Write: sample.txt                              [37d^G(B[m Get Help[37;26H(B[0;7m^T(B[m To Files[37;51H(B[0;7mM-M(B[m Mac Format[37;76H(B[0;7mM-P(B[m Prepend[38d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-D(B[m DOS Format[38;51H(B[0;7mM-A(B[m Append[38;76H(B[0;7mM-B(B[m Backup File[36;31H[36;43H[1K (B[0;7m[ Cancelled ](B[m[K[37;17H(B[0;7m^O(B[m WriteOut     (B[0;7m^R(B[m Read File    (B[0;7m^Y(B[m Prev Page    (B[0;7m^K(B[m Cut Text     (B[0;7m^C(B[m Cur Pos[38;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^J(B[m Justify      (B[0;7m^W(B[m Where Is     (B[0;7m^V(B[m Next Page    (B[0;7m^U(B[m UnCut Text   (B[0;7m^T(B[m To Spell[4;20H[36d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                        [37;1H Y(B[m Yes[K[38d(B[0;7m N(B[m No  [38;18H(B[0;7mC(B[m Cancel[K[36;62H(B[0;7mFile Name to Write: sample.txt                              [37d^G(B[m Get Help[37;26H(B[0;7m^T(B[m To Files[37;51H(B[0;7mM-M(B[m Mac Format[37;76H(B[0;7mM-P(B[m Prepend[38d(B[0;7m^C(B[m Cancel[17G         (B[0;7mM-D(B[m DOS Format[38;51H(B[0;7mM-A(B[m Append[38;76H(B[0;7mM-B(B[m Backup File[36;31H[37d[39;49m(B[m[J[1;91H(B[0;7m        [36;41H(B[m[1K (B[0;7m[ Wrote 2 lines ](B[m[K[38;100H[38;1H[?1049l[?1l>bash-3.2$ cd ..
+bash-3.2$ sftp klu@[K2@hills.ccsf.edu
+klu2@hills.ccsf.edu's password: 
+Connected to hills.ccsf.edu.
+sftp> pwd
+Remote working directory: /students/klu2
+sftp> ls
+Lab1      cs131a    lab01_kl  lab02_kl  stest     stest2    
+sftp> lpwd
+Local working directory: /Users/nanareiair
+sftp> lls
+Applications	Documents	Library		Music		Public		stest
+Desktop		Downloads	Movies		Pictures	lab02_kl
+sftp> g put sample.txt
+stat sample.txt: No such file or directory
+sftp> lcd stest
+sftp> put su ample.txt
+Uploading sample.txt to /students/klu2/sample.txt
+sample.txt                                                          0%    0     0.0KB/s   --:-- ETAsample.txt                                                        100%   31     7.2KB/s   00:00    
+sftp> ls
+Lab1        cs131a      lab01_kl    lab02_kl    sample.txt  stest       stest2      
+sftp> exit
+bash-3.2$ ssh klu2@hills.ccsf.edu
+klu2@hills.ccsf.edu's password: 
+Last login: Fri Jan 26 13:06:41 2018 from 147.144.1.2
+
+**********************************************************
+* W A R N I N G !                                        *
+*                                                        *
+* BY ACCESSING AND USING THIS SYSTEM YOU CONSENT TO      *
+* SYSTEM MONITORING FOR LAW ENFORCEMENT AND OTHER        *
+* PURPOSES.                                              *
+*                                                        *
+* UNAUTHORIZED USE OF THIS COMPUTER SYSTEM MAY SUBJECT   *
+* YOU TO CRIMINAL PROSECUTION AND PENALTIES.             *
+*                                                        *
+* DO NOT COPY OR INSTALL ANY ILLEGAL OR UNLICENSED       *
+* SOFTWARE ON THIS COMPUTER SYSTEM!                      *
+*                                                        *
+* Refer to CCSF Computer Usage Policy for additional     *
+* information: http://www.ccsf.edu/Policy/NEWpolicy.html *
+*                                                        *
+**********************************************************
+
+]0;klu2@hills:~[?1034h[klu2@hills ~]$ cat sample.txt
+Kerrie Lu 
+My sample for Lab2.
+]0;klu2@hills:~[klu2@hills ~]$ rm sample.txt
+]0;klu2@hills:~[klu2@hills ~]$ exit
+logout
+Connection to hills.ccsf.edu closed.
+bash-3.2$ scp sample.txt. [K[K l[Kklu@hills.ccsf.edu: ~/stest/.[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd stest[K[K[K[K[K[K[K[Kscp sample.txt klu@[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpwd
+/Users/nanareiair
+bash-3.2$ scp klu@[K2@hills.cs.[Kf[K[Kcf[Ksf.edu: ~/stest/sample.txt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K~klu2@hills.ccsf.edu:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/klu2@hills.ccsf.edu:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csklu2@hills.ccsf.edu:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctklu2@hills.ccsf.edu:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ceklu2@hills.ccsf.edu:sklu2@hills.ccsf.edu:tklu2@hills.ccsf.edu:/klu2@hills.ccsf.edu:sklu2@hills.ccsf.edu:aklu2@hills.ccsf.edu:mklu2@hills.ccsf.edu:pklu2@hills.ccsf.edu:lklu2@hills.ccsf.edu:eklu2@hills.ccsf.edu:.klu2@hills.ccsf.edu:tklu2@hills.ccsf.edu:xklu2@hills.ccsf.edu:tklu2@hills.ccsf.edu: klu2@hills.ccsf.edu:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.[K
+klu2@hills.ccsf.edu's password: 
+sample.txt                                                          0%    0     0.0KB/s   --:-- ETAsample.txt                                                        100%   31     5.5KB/s   00:00    
+bash-3.2$ ssh klu2@hills.ccsf.edu
+klu2@hills.ccsf.edu's password: 
+Last login: Fri Jan 26 13:20:18 2018 from 147.144.239.35
+
+**********************************************************
+* W A R N I N G !                                        *
+*                                                        *
+* BY ACCESSING AND USING THIS SYSTEM YOU CONSENT TO      *
+* SYSTEM MONITORING FOR LAW ENFORCEMENT AND OTHER        *
+* PURPOSES.                                              *
+*                                                        *
+* UNAUTHORIZED USE OF THIS COMPUTER SYSTEM MAY SUBJECT   *
+* YOU TO CRIMINAL PROSECUTION AND PENALTIES.             *
+*                                                        *
+* DO NOT COPY OR INSTALL ANY ILLEGAL OR UNLICENSED       *
+* SOFTWARE ON THIS COMPUTER SYSTEM!                      *
+*                                                        *
+* Refer to CCSF Computer Usage Policy for additional     *
+* information: http://www.ccsf.edu/Policy/NEWpolicy.html *
+*                                                        *
+**********************************************************
+
+]0;klu2@hills:~[?1034h[klu2@hills ~]$ pwd
+/students/klu2
+]0;klu2@hills:~[klu2@hills ~]$ ls
+[0m[38;5;27mcs131a[0m  lab01_kl  lab02_kl  [38;5;27mLab1[0m  sample.txt  [38;5;27mstest[0m  [38;5;27mstest2[0m
+]0;klu2@hills:~[klu2@hills ~]$ rm sample.txt
+]0;klu2@hills:~[klu2@hills ~]$ scp stest[K[K[K[K[K~s[K/stest. nanarei[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K klu2@147.144.239.35[1P2@147.144.239.35[1P2@147.144.239.35[1P2@147.144.239.35[C[1P@147.144.239.35n@147.144.239.35a@147.144.239.35n@147.144.239.35a@147.144.239.35r@147.144.239.35e@147.144.239.35i@147.144.239.35[C[C[C[C[Cai@147.144.239.35[1Pi@147.144.239.35[Ca@147.144.239.35i@147.144.239.35r@147.144.239.35[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [K: ~/t[Kstest/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K-r nanareiair@147.144.239.35: ~/stest.[K [K[K[K[K[K[K [K[K[K[K~/stest . 
+^[  ^C]0;klu2@hills:~[klu2@hills ~]$ # did not work 
+]0;klu2@hills:~[klu2@hills ~]$ scp /[K/pub/cs/[K[K[K[K[K[K[K[K/pub/cs/grwoo/cs160a/wildcards k[Knanareiair@/pub/cs/grwoo/cs160a/wildcards[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K147.144.239.35: 
+^[  
+
+^C]0;klu2@hills:~[klu2@hills ~]$ 
+]0;klu2@hills:~[klu2@hills ~]$ scp ~ [56@/pub/cs/grwoo/cs160a/wildcards nanareiair@147.144.239.35:[C[C[1@~
+#di oes not work 
+^C]0;klu2@hills:~[klu2@hills ~]$ 
+]0;klu2@hills:~[klu2@hills ~]$ exit
+logout
+Connection to hills.ccsf.edu closed.
+bash-3.2$ exit
+exit
+
+Script done on Fri Jan 26 13:34:04 2018

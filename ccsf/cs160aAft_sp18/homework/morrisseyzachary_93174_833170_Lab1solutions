@@ -1,0 +1,49 @@
+Script started on Mon 22 Jan 2018 02:02:46 PM PST
+[zmorriss@hills ~]$ cd[K[K###PART 1
+[zmorriss@hills ~]$ cd Lab1
+[zmorriss@hills Lab1]$ ls -l
+total 36
+drwx------ 2 zmorriss students     6 Jan 22 13:59 [0m[01;34mdir1[0m
+-rwx------ 1 zmorriss students   238 Jan 22 14:01 [01;32mREADME[0m
+-rwx------ 1 zmorriss students   238 Jan 17 14:47 [01;32mREADME1[0m
+-rwxr-xr-x 1 zmorriss students    52 Jan 17 14:46 [01;32mright[0m
+-rw-r--r-- 1 zmorriss students   307 Jan 17 14:34 typescript
+-rwx------ 1 zmorriss students    52 Jan 22 14:01 [01;32mwrong[0m
+-rwx------ 1 zmorriss students 15211 Jan 22 14:01 [01;32mxyz[0m
+[zmorriss@hills Lab1]$ ###PART 5[K2
+[zmorriss@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[zmorriss@hills Lab1]$ ###PART 3
+[zmorriss@hills Lab1]$ cp README README1
+[zmorriss@hills Lab1]$ ###PART 4
+[zmorriss@hills Lab1]$ MV WRONG[K[K[K[K[K[K[K[Kmv wrong right
+[zmorriss@hills Lab1]$ ###PART 5
+[zmorriss@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[zmorriss@hills Lab1]$ ###PART 6
+[zmorriss@hills Lab1]$ ls -l
+total 32
+drwx------ 2 zmorriss students     6 Jan 22 13:59 [0m[01;34mdir1[0m
+-rwx------ 1 zmorriss students   238 Jan 22 14:01 [01;32mREADME[0m
+-rwx------ 1 zmorriss students   238 Jan 22 14:05 [01;32mREADME1[0m
+-rwx------ 1 zmorriss students    52 Jan 22 14:01 [01;32mright[0m
+-rw-r--r-- 1 zmorriss students   307 Jan 17 14:34 typescript
+-rwx------ 1 zmorriss students 15211 Jan 22 14:01 [01;32mxyz[0m
+[zmorriss@hills Lab1]$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34mdir1[0m  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  typescript  [01;32mxyz[0m
+[zmorriss@hills Lab1]$ ###PART 7 ls-l shows permissions and other data like date, time, file  size, etc. ls-a only lists what's in the directory [K
+[zmorriss@hills Lab1]$ ###PART 8
+[zmorriss@hills Lab1]$ RM [K[K[Krm -rf dir1
+[zmorriss@hills Lab1]$ ###PART 9
+[zmorriss@hills Lab1]$ rm xyz
+[zmorriss@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 02:07:37 PM PST

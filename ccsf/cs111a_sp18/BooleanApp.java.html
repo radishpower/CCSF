@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>BooleanApp.java</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#444444">/* Craig Persiko - CS 111A
+   BooleanApp.java
+   Demonstrates use of Boolean variables and multi-way if statements.
+*/</font>
+
+<font color="0000ff"><strong>import java.util.Scanner;</strong></font>
+
+<strong>public</strong> <strong>class</strong> <font color="#2040a0">BooleanApp</font>
+<font color="4444FF"><strong>{</strong></font>
+  <strong>public</strong> <strong>static</strong> <strong>void</strong> <font color="#2040a0">main</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">String</font><font color="4444FF"><strong>[</strong></font><font color="4444FF"><strong>]</strong></font> <font color="#2040a0">args</font><font color="4444FF"><strong>)</strong></font>
+  <font color="4444FF"><strong>{</strong></font>
+    <strong>int</strong> <font color="#2040a0">age</font><font color="4444FF">;</font>
+    <strong>boolean</strong> <font color="#2040a0">workingAge</font><font color="4444FF">;</font>
+    <font color="#2040a0">Scanner</font> <font color="#2040a0">scan</font> <font color="4444FF">=</font> <strong>new</strong> <font color="#2040a0">Scanner</font> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">System</font>.<font color="#2040a0">in</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Please enter your age&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">age</font> <font color="4444FF">=</font> <font color="#2040a0">scan</font>.<font color="#2040a0">nextInt</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">age</font> <font color="4444FF">&lt;</font> <font color="#FF0000">13</font><font color="4444FF"><strong>)</strong></font>
+    <font color="4444FF"><strong>{</strong></font>
+      <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You're a child&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+      <font color="#2040a0">workingAge</font> <font color="4444FF">=</font> <strong>false</strong><font color="4444FF">;</font> <font color="#444444">// this line is unnecessary because</font>
+                          <font color="#444444">// workingAge is set below, but instead</font>
+                          <font color="#444444">// of that line, lines like this could be</font>
+                          <font color="#444444">// added after each output below.</font>
+    <font color="4444FF"><strong>}</strong></font>
+    <strong>else</strong> <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">age</font> <font color="4444FF">&lt;</font> <font color="#FF0000">18</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You're a teenager&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <strong>else</strong> <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">age</font> <font color="4444FF">&lt;</font> <font color="#FF0000">65</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You're a working adult&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <strong>else</strong>
+      <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You're a retiree&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">workingAge</font> <font color="4444FF">=</font> <font color="#2040a0">age</font> <font color="4444FF">&lt;</font> <font color="#FF0000">65</font>  <font color="4444FF">&amp;</font><font color="4444FF">&amp;</font> <font color="#2040a0">age</font> <font color="4444FF">&gt;</font><font color="4444FF">=</font> <font color="#FF0000">18</font><font color="4444FF">;</font>
+    <strong>if</strong> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">workingAge</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Want a job?&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+  <font color="4444FF"><strong>}</strong></font>
+<font color="4444FF"><strong>}</strong></font>
+
+<font color="#444444">/* Sample output:
+
+Please enter your age
+5
+You're a child
+
+Please enter your age
+31
+You're a working adult
+Want a job?
+
+Please enter your age
+70
+You're a retiree
+
+Please enter your age
+16
+You're a teenager
+
+*/</font>
+
+</pre>
+<hr>
+syntax highlighted by <a href="http://www.palfrader.org/code2html">Code2HTML</a>, v. 0.9
+</body>
+</html>

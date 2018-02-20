@@ -1,0 +1,292 @@
+<HTML><HEAD><TITLE>CS 111A Lecture Notes - Calculations - Chapter 2 part 2 - Craig Persiko</TITLE>
+</HEAD>
+<BODY>
+<h1>CS 111A Lecture Notes - Calculations - Chapter 2 part 2</h1>
+
+<h3>if-else structures</h3>
+<ul>
+  <li>An if-statement is a way to have your program make a choice based upon a condition.  It is an
+  either-or decision structure, with no repetition.  Here's the format:
+    <pre>
+      if( <I>&lt;condition&gt;</I> )
+      {
+        <I>&lt;result 1&gt;;</I>
+      }
+      else
+      {
+        <I>&lt;result 2&gt;;</I>
+      }
+    </pre>
+  In the above example, <I>&lt;result 1&gt;</I> represents code which is executed only if the
+  <I>&lt;condition&gt;</I> is true.  If it's false, <I>&lt;result 2&gt;</I> is executed instead.  The curly
+  braces are only needed for results that contain more than one line of code.
+  <li>The else-clause is optional.  So the following as allowed as well:
+    <pre>
+      if( <I>&lt;condition&gt;</I> )
+      {
+        <I>&lt;result 1&gt;;</I>
+      }
+    </pre>
+  In the above format, if <I>&lt;condition&gt;</I> is false, <I>&lt;result 1&gt;</I> is not executed, and
+  the code continues after the closing curly brace (or after the semi-colon if there are no curly braces).
+  <li>With all if and if-else statements, whether or not the condition is true, the code always continues
+  after the if structure is finished.
+  <li> Notice the placement of semi-colons above.
+  <li> Remember that indentation reflects the level, or scope, of a line of code.
+  <li> The result/body of an if-statement or else-statement is always indented a bit more than the
+  surrounding code.
+</ul>
+
+
+<h3>Relational Operators</h3>
+<ul>
+  <li>Use <b><code>==</code></b> for equality comparison! (assignment operator "=" changes the value on the
+  left, instead of checking to see if values are equal)
+  <li><b><code>&lt;</code></b> means less than
+  <li><b><code>&lt;=</code></b> means less than or equal to
+  <li><b><code>&gt;</code></b> means greater than
+  <li><b><code>&gt;=</code></b> means greater than or equal to
+  <li><b><code>!=</code></b> means not equal
+
+</ul>
+
+<a href="Interest.java.html">Here's a program uses the above structures to calculate interest on an
+investment</a>
+<p>
+<b>In-class exercise #1:</b> Write a program to input the names and ages of 2 people. Then output which name is longer,
+and if the ages are the same or not.<p>
+
+<!--<a href="NamesAndAges.java.html">NamesAndAges.java: Solution to above in-class exercise</a>-->
+
+<h3>Nested and Multi-Way If-Statements</h3>
+<ul>
+  <li>Like most other structures, if-statements may be nested, meaning one if-statement may be put inside
+  another.  Beware of dangling else-statements in such structures.  For example:
+  <pre>
+    int age = 17;
+    if (age &gt;= 18)
+      if (age &lt;= 65)
+        System.out.println("working age");
+      else
+        System.out.println("not working age");
+  </pre>
+  What will be output by the above code?  Else-statements always go with the most recent if-statement in
+  their block, so the else applies to situations where age is over 65 only.  No output is produced.  To
+  make the else-statement associate with the first if-statement, curly braces must be used:
+  <pre>
+    int age = 17;
+    if (age &gt;= 18)
+    {
+      if (age &lt;= 65)
+        System.out.println("working age");
+    }
+    else
+      System.out.println("not working age");
+  </pre>
+  Now the text "not working age" will be displayed, but only if age is under 18.  If it's over 65, no
+  output is produced.  The indentation is different above for readability, but the curly braces,
+  indentation, are what changed the program behavior.
+  <p>
+  <li>If-statements can also be nested to produce <b>multi-way if-statements</b>.  For example:
+  <pre>
+    if(age &lt; 13)
+      System.out.println("child");
+    else
+      if(age &lt; 18)
+        System.out.println("teenager");
+      else
+        System.out.println("adult");
+  </pre>
+  One of the above outputs will always be produced.  For better readability, however, the above code is
+  usually written a bit differently:
+  <pre>
+    if(age &lt; 13)
+      System.out.println("child");
+    else if(age &lt; 18)
+      System.out.println("teenager");
+    else
+      System.out.println("adult");
+  </pre>
+  The meaning of the code is exactly the same, but the indentation more clearly shows that one of the 3
+  options will always be executed.
+  <li> <a href="MoreInterest.java.html">MoreInterest.java</a> A version of
+  the above interest program, with more if-statements, more interest rates.
+  <li> <b>In-class exercise #2:</b> change the program from last class (NamesAndAges.java above) to show who is younger
+  or older as well, and to output if the names are the same length.
+
+  <!--  <li> <a href="NamesAndAgesPart2.java.html">NamesAndAgesPart2.java: Solution to above in-class exercise</a>-->
+
+</ul>
+
+
+<h3>Logical Operators</h3>
+<ul>
+  <li><span style='font-size:14pt; font-family:"Courier New"'>&amp;&amp;</span> means logical AND.  This
+  "and sign" is usually called the "ampersand".  Two of them together mean logical intersection (both sides
+  must be true).
+
+  <li><span style='font-size:14pt; font-family:"Courier New"'>||</span> means logical OR.  This vertical
+  line is called the "pipe".  On the keyboard it usually has a break in the middle, and it's the shifted
+  back-slash (Shift + \). Two of them together mean logical union (either side must be true).
+
+  <li><span style='font-size:14pt; font-family:"Courier New"'>!</span> means logical NOT.  This exclamation
+  point means the opposite of what follows it (false becomes true and vice versa).
+  <li>No strings of inequalities are allowed, e.g. Don't write:<br>
+  <code>if (x &lt; y &lt; z)</code><br> instead, write:<br>
+  <code>if (x &lt; y &amp;&amp; y &lt; z)</code><br>
+  Comparison operators are strictly binary, and they produce a boolean result.
+  <li>You also cannot write something like:<br>
+  <code>if(age &gt;= 18 &amp;&amp; &lt;= 65)</code><br> instead write: <br>
+  <code>if(age &gt;= 18 &amp;&amp; age &lt;= 65)</code><br> Logical operators must work on boolean values.
+  <li> Don't use <b><code>!&lt</code></b> because it's not valid. The way to write that is
+  <b><code>&gt;=</code></b>
+  <li> <b>Operator Precidence (Order of Operations)</b> - The Not operator (!) has the highest precidence, then all mathematical operators are processed. Next come the comparison operators (<, >, ==), and logical And (&&) and finally, logical Or (||).  The detailed 
+  <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html"> operator precidence for all Java operators can be found here.</a>
+
+
+  <li> <b>Short-circuit evaluation</b> - Sometimes, the result of an AND or OR expression can be
+  determined without evaluating both sides of the AND or OR.  This can save time, and it can also alter
+  program behavior.  For example:
+  <pre>
+    int num = 5, den = 0;
+    if (den != 0 && num/den &gt; 1)
+      System.out.println(" num is greater than den ");
+    else
+      System.out.println(" den is 0 or it's greater than num");
+  </pre>
+  The above code will generate a run-time error (division by zero) if the right-side of the AND expression
+  is evaluated.  Fortunately, the left-side will evaluate to false, making the whole expression false no
+  matter what the right expression produces.  So the program will never perform the division, and no
+  run-time error will result.
+</ul>
+
+<h3>Boolean Expressions and Variables</h3>
+<ul>
+  <li><b>Boolean</b> - a term named after mathemetician George Boole, who formulated rules for
+  mathematical logic.  Refers to true/false values and logic corresponding to them.
+  <li><b>boolean</b> - a datatype representing a boolean value.  Can have literal values true or false.
+  <li>Boolean expressions are most often used as the condition for a loop or if-statement.  Such a
+  condition is always evaluated for truth or falsehood, and if it's true, the condition is satisfied.
+  <li>You may store the result of a Boolean expression in a Boolean variable, and you may use that
+  variable as the condition for an if-statement or loop. E.g.:
+  <pre>
+    int x = 5;
+    boolean b = x &lt; 10;  // store true in b if x is less than 10, false otherwise
+    if (b)   // means "if (b == true)"
+      System.out.println("x is less than 10");  // this output will be displayed
+  </pre>
+  <li> The following program illustrates all of the above concepts:
+  <a href="BooleanApp.java.html">BooleanApp.java</a>
+  <li> <b>In-class exercise #3:</b> Modify the Names And Ages Program from the previous class exercise, so it outputs if
+  one or both people are between 18 and 65 years old. You must use a logical and (&&) or or (||). Try using a
+  boolean variable as well. Here is some sample output: <pre>
+    -bash-3.2$ java NamesAndAgesPart3
+    Please enter first person's name:
+    Craig
+    Please enter first person's age:
+    37
+    Please enter second person's name:
+    Serafina
+    Please enter second person's age:
+    7
+    Craig is between 18 and 65, but Serafina is not.
+    -bash-3.2$ java NamesAndAgesPart3
+    Please enter first person's name:
+    Tobias
+    Please enter first person's age:
+    5
+    Please enter second person's name:
+    Serafina
+    Please enter second person's age:
+    7
+    Neither person is between 18 and 65.
+    -bash-3.2$ java NamesAndAgesPart3
+    Please enter first person's name:
+    Geoff
+    Please enter first person's age:
+    37
+    Please enter second person's name:
+    Craig
+    Please enter second person's age:
+    37
+    Both people are between 18 and 65
+    -bash-3.2$
+</pre>
+
+<!--  <li> <a href="NamesAndAgesPart3.java.html">NamesAndAgesPart3.java: Solution to above in-class exercise</a>
+-->
+</ul>
+
+<h3>Switch Statements</h3>
+<ul>
+  <li> A switch statement is another alternative to a multi-way if-statement.  It cannot express ranges of
+  values such as (x &lt; 0), but it is fast and clear when an expression is being checked for one of
+  several possible values which are known at compile-time (a variable compared to one or more int or char
+  literals or constants).
+  <li> In addition, the switch statement can only be used with integer, character, and String datatypes (int, char,
+  byte, short, long, and String).
+  <li> Here is an example of a switch statement:
+  <pre>
+    switch(age)
+    {
+      case 16:                           // if age == 16
+        System.out.println("you can now drive");
+        break;
+      case 18:                           // if age == 18
+        System.out.println("you can now vote");
+        break;
+      case 21:                           // if age == 21
+        System.out.println("you can now drink");
+        break;
+      default:           // if none of the above match age
+        System.out.println("there is nothing special about your age");
+    }
+  </pre>
+  <li> The <b>default</b> section is optional
+  <li> The keyword <b>break</b> is needed to exit the switch statement. Without it, the next case's code
+  would be executed as well.
+  <li> Example: <a href="SwitchGrades.java.html">SwitchGrades.java</a> demonstrates switch statements
+</ul>
+<b>In-class exercise #4:</b> write a program to input the user's 5-digit ZIP code, and output which city they live in
+from the following table.  Use a switch statement to do it.
+<p>
+<TABLE ALIGN="middle" BORDER=2 CELLSPACING=2 CELLPADDING=2 WIDTH="400">
+<TR ALIGN="left" VALIGN="middle">
+  <TH>First 3 digits of ZIP code</TH>
+  <TH>City</TH>
+</TR>
+<TR ALIGN="left" VALIGN="middle">
+  <TD> 900 or 901 </TD>
+  <TD> Los Angeles (and area) </TD>
+</TR>
+<TR ALIGN="left" VALIGN="middle">
+  <TD> 921 </TD>
+  <TD> San Diego (and area) </TD>
+</TR>
+<TR ALIGN="left" VALIGN="middle">
+  <TD> 937 </TD>
+  <TD> Fresno (and area) </TD>
+</TR>
+<TR ALIGN="left" VALIGN="middle">
+  <TD> 941 </TD>
+  <TD> San Francisco </TD>
+</TR>
+<TR ALIGN="left" VALIGN="middle">
+  <TD> 942 </TD>
+  <TD> Sacramento </TD>
+</TR>
+<TR ALIGN="left" VALIGN="middle">
+  <TD> 946 </TD>
+  <TD> Oakland (and area) </TD>
+</TR>
+</TABLE>
+<p>
+
+<!--<a href="ZipCodes.java.html">ZipCodes.java: Solution to in-class
+  exercise #4 to determine city from ZIP code, using switch</a>-->
+
+<p></p>
+
+
+<!--<a href="index.html">Return to CS 111A page</a>-->
+</BODY></HTML>

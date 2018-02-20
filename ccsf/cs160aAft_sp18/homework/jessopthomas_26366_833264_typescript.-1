@@ -1,0 +1,50 @@
+Script started on Wed 17 Jan 2018 02:28:49 PM PST
+]0;tjessopi@hills:~[?1034h[tjessopi@hills ~]$ date
+Wed Jan 17 14:28:57 PST 2018
+]0;tjessopi@hills:~[tjessopi@hills ~]$ pwd
+/students/tjessopi
+]0;tjessopi@hills:~[tjessopi@hills ~]$ whpami[1Pamioami
+tjessopi
+]0;tjessopi@hills:~[tjessopi@hills ~]$ readme[K[K[K[K[K[KREADME
+bash: README: command not found
+]0;tjessopi@hills:~[tjessopi@hills ~]$ rea[Kadme
+bash: readme: command not found
+]0;tjessopi@hills:~[tjessopi@hills ~]$ cdreadmeREADMEwhoami[3Ppwddatenano ClassWork2.java[4Pjava  ClassWork2c  ClassWork2.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pjava  ClassWork2c  ClassWork2.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P  ClassWork2nano ClassWork2.java[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P  ClassWork2nano ClassWork2.javadate[K[1PpwdwhoamiREADMEreadme[4Pcd ..[C[C[C[K[K..[C[C[K[K[K[K[Kreadme[KreadmeREADMEwhoami[3Ppwddatenano ClassWork2.java[4Pjava  ClassWork2c  ClassWork2.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pjava  ClassWork2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcat README
+cat: README: No such file or directory
+]0;tjessopi@hills:~[tjessopi@hills ~]$ cat README[4PreadmeREADMEwhoami[3Ppwddatenano ClassWork2.java[4Pjava  ClassWork2c  ClassWork2.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pjava  ClassWork2c  ClassWork2.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P  ClassWork2nano ClassWork2.java[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P  ClassWork2nano ClassWork2.javadate[K[1PpwdwhoamiREADMEreadmecat README[Kcat README[4PreadmeREADMEwhoami[3Ppwddatenano ClassWork2.java[4Pjava  ClassWork2c  ClassWork2.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pjava  ClassWork2c  ClassWork2.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.java2.javaexit[Knano ClassWork2.java[1P.java2.java[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnano[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P  ClassWork2nano ClassWork2.java[2@javac [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P  ClassWork2nano ClassWork2.javadate[K[1PpwdwhoamiREADMEreadmecat README[KLab [K1 README
+bash: Lab1: command not found
+]0;tjessopi@hills:~[tjessopi@hills ~]$ [K[tjessopi@hills ~]$ cd [K``[K[K[Kd ~
+]0;tjessopi@hills:~[tjessopi@hills ~]$ cp -r /pub/cs/grwoo/cs160a/Labb[K1 ~
+]0;tjessopi@hills:~[tjessopi@hills ~]$ cd ~
+]0;tjessopi@hills:~[tjessopi@hills ~]$ cd [K [K[Kd -r /pub/cs/grwoo/cs160/Lab1 ~
+bash: cd: -r: invalid option
+cd: usage: cd [-L|[-P [-e]]] [dir]
+]0;tjessopi@hills:~[tjessopi@hills ~]$ cd -r /pub/cs/grwoo/cs160/Lab1 ~[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C~[K[29@p -r /pub/cs/grwoo/cs160a/Lab1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd ~[KLab1 README[7Pcd ~[29@p -r /pub/cs/grwoo/cs160a/Lab1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd ~[K-r /pub/cs/grwoo/cs160/Lab1 ~[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kp[Kcp -r /pub/cs/grwoo/cs160a/l[KLab1 ~
+]0;tjessopi@hills:~[tjessopi@hills ~]$ -l
+bash: -l: command not found
+]0;tjessopi@hills:~[tjessopi@hills ~]$ README
+bash: README: command not found
+]0;tjessopi@hills:~[tjessopi@hills ~]$ -l
+bash: -l: command not found
+]0;tjessopi@hills:~[tjessopi@hills ~]$ cd l[KLab1
+]0;tjessopi@hills:~/Lab1[tjessopi@hills Lab1]$ -l
+bash: -l: command not found
+]0;tjessopi@hills:~/Lab1[tjessopi@hills Lab1]$ -;[Kl
+bash: -l: command not found
+]0;tjessopi@hills:~/Lab1[tjessopi@hills Lab1]$ README
+bash: README: command not found
+]0;tjessopi@hills:~/Lab1[tjessopi@hills Lab1]$ cat README 
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;tjessopi@hills:~/Lab1[tjessopi@hills Lab1]$ cat README [5PREADME[4P-l[K[Kdate
+Wed Jan 17 14:48:50 PST 2018
+]0;tjessopi@hills:~/Lab1[tjessopi@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:49:19 PM PST

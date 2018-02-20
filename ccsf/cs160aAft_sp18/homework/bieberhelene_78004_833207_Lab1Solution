@@ -1,0 +1,50 @@
+Script started on Mon 22 Jan 2018 02:23:20 PM PST
+[?1034hbash-4.2$ #Lab 1: Submitting a Script Session - Bieber
+bash-4.2$ date
+Mon Jan 22 14:23:56 PST 2018
+bash-4.2$ pwd
+/students/hbieber
+bash-4.2$ whoami
+hbieber
+bash-4.2$ cd Lab1
+bash-4.2$ ls -l[K[K[K[K[K#1
+bash-4.2$ ls -l
+total 24
+drwx------ 2 hbieber students     6 Jan 22 14:16 dir1
+-rwx------ 1 hbieber students   238 Jan 22 14:22 README
+-rwx------ 1 hbieber students    52 Jan 22 14:22 wrong
+-rwx------ 1 hbieber students 15211 Jan 22 14:22 xyz
+bash-4.2$ cat README[K[K[K[K[K[K[K[K[K[K#2
+bash-4.2$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+bash-4.2$ #3
+bash-4.2$ cp REQD[K[KAD [KME README1
+bash-4.2$ mv wrong right
+bash-4.2$ #5[Kthat was step 4
+bash-4.2$ #5
+bash-4.2$ file xyz
+xyz: PDF document, version 1.4
+bash-4.2$ ls -l
+total 28
+drwx------ 2 hbieber students     6 Jan 22 14:16 dir1
+-rwx------ 1 hbieber students   238 Jan 22 14:22 README
+-rwx------ 1 hbieber students   238 Jan 22 14:26 README1
+-rwx------ 1 hbieber students    52 Jan 22 14:22 right
+-rwx------ 1 hbieber students 15211 Jan 22 14:22 xyz
+bash-4.2$ ls -a
+.  ..  dir1  README  README1  right  xyz
+bash-4.2$ #The difference is that ls[K[K-l give [Ks ;ore[K[K[K[Kmore informations like the permisions [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[Ksion s, the date and -a doesn't
+bash-4.2$ rmdir dir1
+bash-4.2$ rm xyz
+bash-4.2$ exit
+exit
+
+Script done on Mon 22 Jan 2018 02:29:21 PM PST

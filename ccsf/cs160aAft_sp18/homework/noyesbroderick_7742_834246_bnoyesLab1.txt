@@ -1,0 +1,58 @@
+Script started on Mon 22 Jan 2018 02:10:29 PM PST
+[bnoyes@hills ~]$ date
+Mon Jan 22 14:10:32 PST 2018
+[bnoyes@hills ~]$ pwd
+/students/bnoyes
+[bnoyes@hills ~]$ whoami
+bnoyes
+[bnoyes@hills ~]$ # part 1
+[bnoyes@hills ~]$ cd Lab1 
+[bnoyes@hills Lab1]$ ls -l
+total 24
+drwx------ 2 bnoyes students     6 Jan 17 14:06 dir1
+-rwx------ 1 bnoyes students   238 Jan 17 14:53 README
+-rwx------ 1 bnoyes students    52 Jan 17 14:53 wrong
+-rwx------ 1 bnoyes students 15211 Jan 17 14:53 xyz
+[bnoyes@hills Lab1]$ # part 2
+[bnoyes@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README  this file
+xyz     a document
+wrong   a dummy file with the wrong name
+dir1    an empty directory
+.hidden a hidden file
+[bnoyes@hills Lab1]$ # part 3
+[bnoyes@hills Lab1]$ cp README README1
+[bnoyes@hills Lab1]$ # part 4
+[bnoyes@hills Lab1]$ mv wrong right
+[bnoyes@hills Lab1]$ # part 5 
+[bnoyes@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[bnoyes@hills Lab1]$ # part 6
+[bnoyes@hills Lab1]$ ls -l
+total 28
+drwx------ 2 bnoyes students     6 Jan 17 14:06 dir1
+-rwx------ 1 bnoyes students   238 Jan 17 14:53 README
+-rwx------ 1 bnoyes students   238 Jan 22 14:11 README1
+-rwx------ 1 bnoyes students    52 Jan 17 14:53 right
+-rwx------ 1 bnoyes students 15211 Jan 17 14:53 xyz
+[bnoyes@hills Lab1]$ # part 7  
+[bnoyes@hills Lab1]$ ls -l -a
+total 40
+drwx------   3 bnoyes students    71 Jan 22 14:12 .
+drwx--x--x. 17 bnoyes students  8192 Jan 22 14:10 ..
+drwx------   2 bnoyes students     6 Jan 17 14:06 dir1
+-rwx------   1 bnoyes students   238 Jan 17 14:53 README
+-rwx------   1 bnoyes students   238 Jan 22 14:11 README1
+-rwx------   1 bnoyes students    52 Jan 17 14:53 right
+-rwx------   1 bnoyes students 15211 Jan 17 14:53 xyz
+[bnoyes@hills Lab1]$ # part 8
+[bnoyes@hills Lab1]$ rm dir1 -r
+[bnoyes@hills Lab1]$ # part 9
+[bnoyes@hills Lab1]$ rm xyz
+[bnoyes@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 02:14:30 PM PST

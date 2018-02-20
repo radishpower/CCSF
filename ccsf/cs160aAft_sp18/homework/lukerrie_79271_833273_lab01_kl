@@ -1,0 +1,44 @@
+Script started on Mon 22 Jan 2018 02:33:00 PM PST
+]0;klu2@hills:~[?1034h[klu2@hills ~]$ date
+Mon Jan 22 14:33:02 PST 2018
+]0;klu2@hills:~[klu2@hills ~]$ pwd
+/students/klu2
+]0;klu2@hills:~[klu2@hills ~]$ whoami
+klu2
+]0;klu2@hills:~[klu2@hills ~]$ cd lav[K[K[KLab1
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ ls -l
+total 32
+drwx------ 2 klu2 students     6 Jan 22 14:08 [0m[38;5;27mdir1[0m
+-rwx------ 1 klu2 students   238 Jan 22 14:32 [38;5;34mREADME[0m
+-rwx------ 1 klu2 students   238 Jan 22 14:24 [38;5;34mREADME1[0m
+-rwx------ 1 klu2 students    52 Jan 22 14:21 [38;5;34mright[0m
+-rwx------ 1 klu2 students    52 Jan 22 14:32 [38;5;34mwrong[0m
+-rwx------ 1 klu2 students 15211 Jan 22 14:32 [38;5;34mxyz[0m
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ cp re[K[KREADME README1
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ mv wrong right
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ [K[klu2@hills Lab1]$ ls -l
+total 28
+drwx------ 2 klu2 students     6 Jan 22 14:08 [0m[38;5;27mdir1[0m
+-rwx------ 1 klu2 students   238 Jan 22 14:32 [38;5;34mREADME[0m
+-rwx------ 1 klu2 students   238 Jan 22 14:37 [38;5;34mREADME1[0m
+-rwx------ 1 klu2 students    52 Jan 22 14:32 [38;5;34mright[0m
+-rwx------ 1 klu2 students 15211 Jan 22 14:32 [38;5;34mxyz[0m
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ -ls[K[K[Kls -a
+[0m[38;5;27m.[0m  [38;5;27m..[0m  [38;5;27mdir1[0m  [38;5;34mREADME[0m  [38;5;34mREADME1[0m  [38;5;34mright[0m  [38;5;34mxyz[0m
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ rm -rf dir1
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ rm xyz
+]0;klu2@hills:~/Lab1[klu2@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 02:40:55 PM PST

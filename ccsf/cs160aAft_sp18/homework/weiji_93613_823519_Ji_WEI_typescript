@@ -1,0 +1,48 @@
+Script started on Wed 17 Jan 2018 02:46:03 PM PST
+]0;jwei38@hills:~/Lab1[?1034h[jwei38@hills Lab1]$ cp -r /pub/cs/grwoo/cs160a/Lab1 ~
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ date
+Wed Jan 17 14:46:12 PST 2018
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ pwd
+/students/jwei38/Lab1
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ whoami
+jwei38
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ cd Lab1
+bash: cd: Lab1: No such file or directory
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ pwd
+/students/jwei38/Lab1
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ ls -l
+total 24
+drwx------ 2 jwei38 students     6 Jan 17 14:09 [0m[38;5;27mdir1[0m
+-rwx------ 1 jwei38 students   238 Jan 17 14:46 [38;5;34mREADME[0m
+-rw-r--r-- 1 jwei38 students     0 Jan 17 14:46 typescript
+-rwx------ 1 jwei38 students    52 Jan 17 14:46 [38;5;34mwrong[0m
+-rwx------ 1 jwei38 students 15211 Jan 17 14:46 [38;5;34mxyz[0m
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ cp README README1
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ mv wrong right
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ ls -l
+total 28
+drwx------ 2 jwei38 students     6 Jan 17 14:09 [0m[38;5;27mdir1[0m
+-rwx------ 1 jwei38 students   238 Jan 17 14:46 [38;5;34mREADME[0m
+-rwx------ 1 jwei38 students   238 Jan 17 14:47 [38;5;34mREADME1[0m
+-rwx------ 1 jwei38 students    52 Jan 17 14:46 [38;5;34mright[0m
+-rw-r--r-- 1 jwei38 students     0 Jan 17 14:46 typescript
+-rwx------ 1 jwei38 students 15211 Jan 17 14:46 [38;5;34mxyz[0m
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ ls -a
+[0m[38;5;27m.[0m  [38;5;27m..[0m  [38;5;27mdir1[0m  [38;5;34mREADME[0m  [38;5;34mREADME1[0m  [38;5;34mright[0m  typescript  [38;5;34mxyz[0m
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ rm -rf dir1
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ rm xyz
+]0;jwei38@hills:~/Lab1[jwei38@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:50:06 PM PST

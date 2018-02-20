@@ -1,0 +1,36 @@
+Script started on Mon 22 Jan 2018 10:43:03 PM PST
+[kho40@hills ~]$ cd L    ls  cd Lab1
+[kho40@hills Lab1]$ ls-  -l
+total 24
+drwx------ 2 kho40 students     6 Jan 22 22:42 dir1
+-rwx------ 1 kho40 students   238 Jan 22 22:42 README
+-rwx------ 1 kho40 students    52 Jan 22 22:42 wrong
+-rwx------ 1 kho40 students 15211 Jan 22 22:42 xyz
+[kho40@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[kho40@hills Lab1]$                                                                                [kho40@hills Lab1]$ cp README README1
+[kho40@hills Lab1]$ mv wrong right
+[kho40@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[kho40@hills Lab1]$ ls -l
+total 28
+drwx------ 2 kho40 students     6 Jan 22 22:42 dir1
+-rwx------ 1 kho40 students   238 Jan 22 22:42 README
+-rwx------ 1 kho40 students   238 Jan 22 22:43 README1
+-rwx------ 1 kho40 students    52 Jan 22 22:42 right
+-rwx------ 1 kho40 students 15211 Jan 22 22:42 xyz
+[kho40@hills Lab1]$ ls 0a  -a
+.  ..  dir1  README  README1  right  xyz
+[kho40@hills Lab1]$ rm -rf dir1
+[kho40@hills Lab1]$ rm xyz
+[kho40@hills Lab1]$ exit
+exit
+
+Script done on Mon 22 Jan 2018 10:44:22 PM PST

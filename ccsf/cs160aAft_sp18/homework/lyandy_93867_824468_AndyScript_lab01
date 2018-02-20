@@ -1,0 +1,63 @@
+Script started on Wed 17 Jan 2018 02:22:31 PM PST
+]0;aly23@hills:~[?1034h[aly23@hills ~]$ date 
+Wed Jan 17 14:22:41 PST 2018
+]0;aly23@hills:~[aly23@hills ~]$ pwd
+/students/aly23
+]0;aly23@hills:~[aly23@hills ~]$ woam[K[K[Khoami
+aly23
+]0;aly23@hills:~[aly23@hills ~]$ cd Lab1
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ cat REAM[KDME
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ cp README1 [K[K README1
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ ls[K[Kls
+[0m[01;34mdir1[0m  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ mv wrong t[Kright
+mv: cannot stat ‘wrong’: No such file or directory
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ mv right wrong
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ mv righ[K[K[K[Kwong right
+mv: cannot stat ‘wong’: No such file or directory
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ mv wong right[K[K[K[K[K[K[K[K[Krong right
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ ls
+[0m[01;34mdir1[0m  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ ls-l[K[K[Ks -l
+total 28
+drwx------ 2 aly23 students     6 Jan 17 14:13 [0m[01;34mdir1[0m
+-rwx------ 1 aly23 students   238 Jan 17 14:13 [01;32mREADME[0m
+-rwx------ 1 aly23 students   238 Jan 17 14:23 [01;32mREADME1[0m
+-rwx------ 1 aly23 students    52 Jan 17 14:13 [01;32mright[0m
+-rwx------ 1 aly23 students 15211 Jan 17 14:13 [01;32mxyz[0m
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ ls -l [Ka
+total 28
+drwx------ 3 aly23 students    71 Jan 17 14:23 [0m[01;34m.[0m
+drwx------ 5 aly23 students   170 Jan 17 14:22 [01;34m..[0m
+drwx------ 2 aly23 students     6 Jan 17 14:13 [01;34mdir1[0m
+-rwx------ 1 aly23 students   238 Jan 17 14:13 [01;32mREADME[0m
+-rwx------ 1 aly23 students   238 Jan 17 14:23 [01;32mREADME1[0m
+-rwx------ 1 aly23 students    52 Jan 17 14:13 [01;32mright[0m
+-rwx------ 1 aly23 students 15211 Jan 17 14:13 [01;32mxyz[0m
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ rm f dir1
+rm: cannot remove ‘f’: No such file or directory
+rm: cannot remove ‘dir1’: Is a directory
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ rm dir1
+rm: cannot remove ‘dir1’: Is a directory
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ ls
+[0m[01;34mdir1[0m  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ rmdir dir1
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ ls
+[0m[01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ rm xyz
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ ls
+[0m[01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m
+]0;aly23@hills:~/Lab1[aly23@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:26:26 PM PST

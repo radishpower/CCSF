@@ -1,0 +1,107 @@
+<html>
+<head>
+  <title>MoreInterest.java</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#444444">/* Craig Persiko - CS 111A - MoreInterest.java
+   Sample program to demonstrate i/o, calculations and if-statement.
+
+   This modified version of the original Interest.java has more
+   conditions - more interest rates.
+
+   Interest Program
+   Allows user to enter the amount of an investment.
+   Investments earn different interest rates.
+   The dollar amount of interest
+   earned is output by the program.
+*/</font>
+
+<font color="0000ff"><strong>import java.util.Scanner;</strong></font>
+
+<strong>public</strong> <strong>class</strong> <font color="#2040a0">MoreInterest</font>
+<font color="4444FF"><strong>{</strong></font>
+  <strong>public</strong> <strong>static</strong> <strong>void</strong> <font color="#2040a0">main</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">String</font><font color="4444FF"><strong>[</strong></font><font color="4444FF"><strong>]</strong></font> <font color="#2040a0">args</font><font color="4444FF"><strong>)</strong></font>
+  <font color="4444FF"><strong>{</strong></font>
+    <strong>double</strong> <font color="#2040a0">inv_amount</font>, <font color="#2040a0">int_earned</font><font color="4444FF">;</font>
+    <font color="#2040a0">Scanner</font> <font color="#2040a0">scan</font> <font color="4444FF">=</font> <strong>new</strong> <font color="#2040a0">Scanner</font> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">System</font>.<font color="#2040a0">in</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Welcome to Investment World<font color="#77dd77">\n</font>Enter amount to be invested&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">inv_amount</font> <font color="4444FF">=</font> <font color="#2040a0">scan</font>.<font color="#2040a0">nextDouble</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">inv_amount</font> <font color="4444FF">&lt;</font> <font color="#FF0000">50000.0</font><font color="4444FF"><strong>)</strong></font>
+    <font color="4444FF"><strong>{</strong></font>
+      <strong>if</strong> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">inv_amount</font> <font color="4444FF">&lt;</font><font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF"><strong>)</strong></font>
+      <font color="4444FF"><strong>{</strong></font>
+        <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">;</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You need to have money to make interest&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+      <font color="4444FF"><strong>}</strong></font>
+      <strong>else</strong>
+      <font color="4444FF"><strong>{</strong></font>
+        <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#2040a0">inv_amount</font> <font color="4444FF">*</font> <font color="#FF0000">0.05</font><font color="4444FF">;</font> <font color="#444444">// 5% interest</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You're earning 5% interest&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+      <font color="4444FF"><strong>}</strong></font>
+    <font color="4444FF"><strong>}</strong></font>
+    <strong>else</strong> <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">inv_amount</font> <font color="4444FF">&lt;</font> <font color="#FF0000">100000.0</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#2040a0">inv_amount</font> <font color="4444FF">*</font> <font color="#FF0000">0.06</font><font color="4444FF">;</font> <font color="#444444">// 6% interest</font>
+    <strong>else</strong> <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">inv_amount</font> <font color="4444FF">&lt;</font> <font color="#FF0000">200000.0</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#2040a0">inv_amount</font> <font color="4444FF">*</font> <font color="#FF0000">0.07</font><font color="4444FF">;</font> <font color="#444444">// 7% interest</font>
+    <strong>else</strong> <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">inv_amount</font> <font color="4444FF">&lt;</font> <font color="#FF0000">300000.0</font><font color="4444FF"><strong>)</strong></font>
+      <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#2040a0">inv_amount</font> <font color="4444FF">*</font> <font color="#FF0000">0.08</font><font color="4444FF">;</font> <font color="#444444">// 8% interest</font>
+    <strong>else</strong>
+      <font color="#2040a0">int_earned</font> <font color="4444FF">=</font> <font color="#2040a0">inv_amount</font> <font color="4444FF">*</font> <font color="#FF0000">0.09</font><font color="4444FF">;</font> <font color="#444444">// 9%</font>
+    <font color="#444444">// No curly braces are needed above because only one line is</font>
+    <font color="#444444">// executed in each case.</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Your investment earns $&quot;</font> <font color="4444FF">+</font> <font color="#2040a0">int_earned</font>
+                       <font color="4444FF">+</font> <font color="#008000">&quot; interest in one year.&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Your total in the bank is: $&quot;</font> <font color="4444FF">+</font> 
+                        <font color="4444FF"><strong>(</strong></font><font color="#2040a0">inv_amount</font> <font color="4444FF">+</font> <font color="#2040a0">int_earned</font><font color="4444FF"><strong>)</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+  <font color="4444FF"><strong>}</strong></font>
+<font color="4444FF"><strong>}</strong></font>
+
+<font color="#444444">/* Sample Output:
+
+[cpersiko@fog cs111a]$ javac MoreInterest.java
+[cpersiko@fog cs111a]$ java MoreInterest
+Welcome to Investment World
+Enter amount to be invested
+199
+You're earning 5% interest
+Your investment earns $9.950000000000001 interest in one year.
+Your total in the bank is: $208.95
+[cpersiko@fog cs111a]$ java MoreInterest
+Welcome to Investment World
+Enter amount to be invested
+10000
+You're earning 5% interest
+Your investment earns $500.0 interest in one year.
+Your total in the bank is: $10500.0
+[cpersiko@fog cs111a]$ java MoreInterest
+Welcome to Investment World
+Enter amount to be invested
+100000
+Your investment earns $7000.000000000001 interest in one year.
+Your total in the bank is: $107000.0
+[cpersiko@fog cs111a]$ java MoreInterest
+Welcome to Investment World
+Enter amount to be invested
+1000000
+Your investment earns $90000.0 interest in one year.
+Your total in the bank is: $1090000.0
+[cpersiko@fog cs111a]$ java MoreInterest
+Welcome to Investment World
+Enter amount to be invested
+-5
+You need to have money to make interest
+Your investment earns $0.0 interest in one year.
+Your total in the bank is: $-5.0
+[cpersiko@fog cs111a]$
+
+*/</font>
+
+</pre>
+<hr>
+syntax highlighted by <a href="http://www.palfrader.org/code2html">Code2HTML</a>, v. 0.9
+</body>
+</html>

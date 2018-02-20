@@ -1,0 +1,102 @@
+<html>
+<head>
+  <title>SwitchGradesMore.java</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="#444444">/* Craig Persiko  -  SwitchGradesMore.java
+   Sample program to demonstrate use of switch statement.
+   Had more to it than the original version.
+   Done in class 9/10/09
+*/</font>
+
+<font color="0000ff"><strong>import java.util.Scanner;</strong></font>
+
+<strong>class</strong> <font color="#2040a0">SwitchGradesMore</font>
+<font color="4444FF"><strong>{</strong></font>
+  <strong>public</strong> <strong>static</strong> <strong>void</strong> <font color="#2040a0">main</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">String</font> <font color="#2040a0">args</font><font color="4444FF"><strong>[</strong></font><font color="4444FF"><strong>]</strong></font><font color="4444FF"><strong>)</strong></font>
+  <font color="4444FF"><strong>{</strong></font>
+    <strong>char</strong> <font color="#2040a0">grade</font>, <font color="#2040a0">mid_term</font><font color="4444FF">;</font>
+    <font color="#2040a0">String</font> <font color="#2040a0">input</font><font color="4444FF">;</font>
+    <font color="#2040a0">Scanner</font> <font color="#2040a0">keyIn</font> <font color="4444FF">=</font> <strong>new</strong> <font color="#2040a0">Scanner</font> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">System</font>.<font color="#2040a0">in</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Enter your mid-term grade&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">input</font> <font color="4444FF">=</font> <font color="#2040a0">keyIn</font>.<font color="#2040a0">nextLine</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">input</font>.<font color="#2040a0">length</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font> <font color="4444FF">&gt;</font> <font color="#FF0000">0</font><font color="4444FF"><strong>)</strong></font> <font color="#444444">// if one or more characters entered</font>
+      <font color="#2040a0">mid_term</font> <font color="4444FF">=</font> <font color="#2040a0">input</font>.<font color="#2040a0">charAt</font><font color="4444FF"><strong>(</strong></font><font color="#FF0000">0</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font> <font color="#444444">// first character from the string</font>
+    <strong>else</strong> <font color="#444444">// empty string was entered</font>
+      <font color="#2040a0">mid_term</font> <font color="4444FF">=</font> <font color="#008000">'w'</font><font color="4444FF">;</font>
+
+    <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Enter your semester grade&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">input</font> <font color="4444FF">=</font> <font color="#2040a0">keyIn</font>.<font color="#2040a0">nextLine</font><font color="4444FF"><strong>(</strong></font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="#2040a0">grade</font> <font color="4444FF">=</font> <font color="#2040a0">input</font>.<font color="#2040a0">charAt</font><font color="4444FF"><strong>(</strong></font><font color="#FF0000">0</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font> <font color="#444444">// first character from the string</font>
+
+    <strong>switch</strong> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">grade</font><font color="4444FF"><strong>)</strong></font>
+    <font color="4444FF"><strong>{</strong></font>
+      <strong>case</strong> <font color="#008000">'a'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'A'</font><font color="4444FF">:</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Excellent!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <strong>break</strong><font color="4444FF">;</font>
+      <strong>case</strong> <font color="#008000">'b'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'B'</font><font color="4444FF">:</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Good job!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <strong>break</strong><font color="4444FF">;</font>
+      <strong>case</strong> <font color="#008000">'c'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'C'</font><font color="4444FF">:</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;Not bad!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <strong>break</strong><font color="4444FF">;</font>
+      <strong>case</strong> <font color="#008000">'d'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'D'</font><font color="4444FF">:</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font> <font color="#008000">&quot;You passed!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <strong>switch</strong> <font color="4444FF"><strong>(</strong></font><font color="#2040a0">Character</font>.<font color="#2040a0">toLowerCase</font><font color="4444FF"><strong>(</strong></font><font color="#2040a0">mid_term</font><font color="4444FF"><strong>)</strong></font><font color="4444FF"><strong>)</strong></font>
+        <font color="4444FF"><strong>{</strong></font>
+          <strong>case</strong> <font color="#008000">'a'</font><font color="4444FF">:</font>  <font color="#444444">// both A and B produce this result:</font>
+          <strong>case</strong> <font color="#008000">'b'</font><font color="4444FF">:</font>
+            <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font> <font color="#008000">&quot;You started out very well!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+            <strong>break</strong><font color="4444FF">;</font>
+          <strong>case</strong> <font color="#008000">'f'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'e'</font><font color="4444FF">:</font>
+            <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You improved!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <font color="4444FF"><strong>}</strong></font>
+        <strong>break</strong><font color="4444FF">;</font>
+      <strong>case</strong> <font color="#008000">'f'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'F'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'e'</font><font color="4444FF">:</font> <strong>case</strong> <font color="#008000">'E'</font><font color="4444FF">:</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You need to study more!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <strong>if</strong><font color="4444FF"><strong>(</strong></font><font color="#2040a0">mid_term</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#008000">'a'</font> <font color="4444FF">|</font><font color="4444FF">|</font> <font color="#2040a0">mid_term</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#008000">'A'</font> <font color="4444FF">|</font><font color="4444FF">|</font> <font color="#2040a0">mid_term</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#008000">'b'</font> <font color="4444FF">|</font><font color="4444FF">|</font> <font color="#2040a0">mid_term</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#008000">'B'</font><font color="4444FF"><strong>)</strong></font>
+          <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;You were doing much better before!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+        <strong>break</strong><font color="4444FF">;</font>
+      <strong>default</strong><font color="4444FF">:</font>
+        <font color="#2040a0">System</font>.<font color="#2040a0">out</font>.<font color="#2040a0">println</font><font color="4444FF"><strong>(</strong></font><font color="#008000">&quot;What grading system are you using?!&quot;</font><font color="4444FF"><strong>)</strong></font><font color="4444FF">;</font>
+    <font color="4444FF"><strong>}</strong></font>
+  <font color="4444FF"><strong>}</strong></font>
+<font color="4444FF"><strong>}</strong></font>
+
+<font color="#444444">/* Sample Output:
+
+Enter your mid-term grade
+a
+Enter your semester grade
+d
+You passed!
+You started out very well!
+
+Enter your mid-term grade
+F
+Enter your semester grade
+F
+You need to study more!
+
+Enter your mid-term grade
+w
+Enter your semester grade
+w
+What grading system are you using?!
+
+Enter your mid-term grade
+F
+Enter your semester grade
+D
+You passed!
+You improved!
+
+*/</font>
+
+</pre>
+<hr>
+syntax highlighted by <a href="http://www.palfrader.org/code2html">Code2HTML</a>, v. 0.9
+</body>
+</html>

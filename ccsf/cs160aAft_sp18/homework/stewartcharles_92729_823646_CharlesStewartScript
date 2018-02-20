@@ -1,0 +1,52 @@
+[cstewa20@hills ~]$ clear
+[cstewa20@hills ~]$ ls
+CharlesStewartTypeScript  Lab1
+[cstewa20@hills ~]$ cat CharlesStewartTypeScript
+Script started on Wed 17 Jan 2018 03:08:44 PM PST
+[cstewa20@hills ~]$ cd Lab1
+[cstewa20@hills Lab1]$ ls -l
+total 24
+drwx------ 2 cstewa20 students     6 Jan 17 15:08 dir1
+-rwx------ 1 cstewa20 students   238 Jan 17 15:08 README
+-rwx------ 1 cstewa20 students    52 Jan 17 15:08 wrong
+-rwx------ 1 cstewa20 students 15211 Jan 17 15:08 xyz
+[cstewa20@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the
+first lab in cs160a:
+README  this file
+xyz     a document
+wrong   a dummy file with the wrong name
+dir1    an empty directory
+.hidden a hidden file
+[cstewa20@hills Lab1]$ cp README README1
+[cstewa20@hills Lab1]$ ls
+dir1  README  README1  wrong  xyz
+[cstewa20@hills Lab1]$ mv wrong right
+[cstewa20@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[cstewa20@hills Lab1]$ ls -l
+total 28
+drwx------ 2 cstewa20 students     6 Jan 17 15:08 dir1
+-rwx------ 1 cstewa20 students   238 Jan 17 15:08 README
+-rwx------ 1 cstewa20 students   238 Jan 17 15:09 README1
+-rwx------ 1 cstewa20 students    52 Jan 17 15:08 right
+-rwx------ 1 cstewa20 students 15211 Jan 17 15:08 xyz
+[cstewa20@hills Lab1]$ ls -la
+total 28
+drwx------ 3 cstewa20 students    71 Jan 17 15:09 .
+drwx------ 5 cstewa20 students   186 Jan 17 15:08 ..
+drwx------ 2 cstewa20 students     6 Jan 17 15:08 dir1
+-rwx------ 1 cstewa20 students   238 Jan 17 15:08 README
+-rwx------ 1 cstewa20 students   238 Jan 17 15:09 README1
+-rwx------ 1 cstewa20 students    52 Jan 17 15:08 right
+-rwx------ 1 cstewa20 students 15211 Jan 17 15:08 xyz
+[cstewa20@hills Lab1]$
+[cstewa20@hills Lab1]$ rmdir dir1
+[cstewa20@hills Lab1]$ rm xyz
+[cstewa20@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 03:10:40 PM PST
+[cstewa20@hills ~]$
+

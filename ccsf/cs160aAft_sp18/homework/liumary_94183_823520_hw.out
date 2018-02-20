@@ -1,0 +1,58 @@
+Script started on Wed 17 Jan 2018 02:35:34 PM PST
+]0;mliu155@hills:~/Lab1[?1034h[mliu155@hills Lab1]$ date
+Wed Jan 17 14:35:39 PST 2018
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ pwd
+/students/mliu155/Lab1
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ whoami
+mliu155
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ cd /Lab[K[K[K[K[K[K[Kcd
+]0;mliu155@hills:~[mliu155@hills ~]$ cd Lab1
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ ls
+[0m[01;34mdir1[0m  hw.out  [01;32mREADME[0m  [01;32mwrong[0m  [01;32mxyz[0m
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ cat README[K[K[K[K[K[K[K[K[K[Kls -l
+total 24
+drwx------ 2 mliu155 students     6 Jan 17 14:32 [0m[01;34mdir1[0m
+-rw------- 1 mliu155 students     0 Jan 17 14:35 hw.out
+-rwx------ 1 mliu155 students   238 Jan 17 14:32 [01;32mREADME[0m
+-rwx------ 1 mliu155 students    52 Jan 17 14:32 [01;32mwrong[0m
+-rwx------ 1 mliu155 students 15211 Jan 17 14:32 [01;32mxyz[0m
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ cp README README1
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ ls
+[0m[01;34mdir1[0m  hw.out  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mwrong[0m  [01;32mxyz[0m
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ mv wrong right
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ ls -l
+total 28
+drwx------ 2 mliu155 students     6 Jan 17 14:32 [0m[01;34mdir1[0m
+-rw------- 1 mliu155 students     0 Jan 17 14:35 hw.out
+-rwx------ 1 mliu155 students   238 Jan 17 14:32 [01;32mREADME[0m
+-rwx------ 1 mliu155 students   238 Jan 17 14:37 [01;32mREADME1[0m
+-rwx------ 1 mliu155 students    52 Jan 17 14:32 [01;32mright[0m
+-rwx------ 1 mliu155 students 15211 Jan 17 14:32 [01;32mxyz[0m
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34mdir1[0m  hw.out  [01;32mREADME[0m  [01;32mREADME1[0m  [01;32mright[0m  [01;32mxyz[0m
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ rm -rf dir1
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ rm xyz
+]0;mliu155@hills:~/Lab1[mliu155@hills Lab1]$ exit
+exit
+
+Script done on Wed 17 Jan 2018 02:38:07 PM PST
